@@ -36,7 +36,13 @@
 ehthumbs.db
 Thumbs.db
 
+# Theme files #
+######################
 wp-content/themes/krittabug2018/node_modules
 wp-content/themes/krittabug2018/node_modules/*
 wp-content/uploads
 wp-content/uploads/*
+wp-content/themes/krittabug2018/css
+wp-content/themes/krittabug2018/css/*
+wp-content/themes/krittabug2018/js
+wp-content/themes/krittabug2018/js/*
