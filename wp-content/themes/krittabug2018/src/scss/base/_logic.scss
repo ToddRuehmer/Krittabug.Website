@@ -1,0 +1,58 @@
+﻿//Mixins
+@mixin Perspective($arguments: 600px, $origin: 50% 50%) {
+	-webkit-perspective: $arguments;
+	-ms-perspective: $arguments;
+	perspective: $arguments;
+
+    -webkit-perspective-origin: $origin;
+    perspective-origin: $origin;
+}
+
+@mixin Keyframes($name, $content) {
+	@-moz-keyframes #{$name} { @content; }
+	@-webkit-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+}
+	
+@mixin ClearFix() {
+	* html & {
+		height: 1%;
+		overflow: visible;
+	}
+	*+html & {
+		min-height: 1%;
+	}
+	&:after {
+		content: "";
+		display: block;
+		height: 0 !important;
+		overflow: hidden;
+		position: static !important;
+		clear: both;
+	}
+}
+
+@mixin Button($bg:$Aqua, $text:#fff) {    
+    background: $bg;
+	border: none;
+	border-radius: 0 !important;
+    color: $text;
+	display: inline-block;
+	font-size: .7em;
+    font-weight: bold;
+    padding: 0.85em 2em 0.8em;
+	text-decoration: none;
+	text-shadow: none !important;
+    text-transform: uppercase;
+    transition: all .2s;
+	&:hover { border-color: lighten($Midnight,90%); color: $text; }
+	&:before { display: none; }
+            
+	@include breakpoint(medium down) { font-size: $m*1.4; line-height: 1; max-height: none !important; padding: $m*.6; }    
+
+}
+
+@mixin GlobalPadding() {
+	padding-left: 5em;
+	padding-right: 5em;
+}

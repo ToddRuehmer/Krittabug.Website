@@ -1,0 +1,19 @@
+{
+  "name": "krittabug2018",
+  "description": "",
+  "main": "",
+  "authors": [
+    "thiirteen <truehmer@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ToddRuehmer/Krittabug.Website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ]
+}

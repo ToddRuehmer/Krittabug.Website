@@ -1,0 +1,23 @@
+﻿.KB-Icon {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+.KB-Btn, .KB-Btn_1 {
+    @include Button;
+}
+.KB-Btn_2 {
+    @extend .KB-Btn_1;
+    background: none;
+    border: none;
+    box-shadow: none;
+    font-size: 1rem;
+    padding: 0;
+    &:hover {
+        &:after { opacity: 1; right: 0; }
+    }
+}
+.KB-Btn_3 {
+    @extend .KB-Btn_2;
+    color: $BasicTextColor;
+}

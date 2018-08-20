@@ -1,0 +1,394 @@
+﻿//Fonts
+
+@font-face {
+    font-family: 'Hugtophia';
+    src: url('../fonts/hugtophia-webfont.woff2') format('woff2'),
+         url('../fonts/hugtophia-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+//Toolbox
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1em;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*:focus {
+    outline: none;
+}
+main {
+    display: block;
+}
+
+//Default Styles
+html {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    color: $BasicTextColor;
+    font: 16px/26px $BasicFontStack;
+    overflow-x: hidden;
+}
+a {
+    color: $Accent;
+    word-wrap: break-word;
+    &:hover {
+        color: lighten($Accent, 15%);
+    }
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+strong {
+    font-weight: bold;
+    a:hover {
+        text-decoration: none;
+    }
+}
+em {
+    font-style: italic;
+}
+
+@mixin heading() {
+    color: $BasicHeadingColor;
+    font-family: $HeadingFontStack;
+    font-weight: bold;
+    letter-spacing: .1em;
+    line-height: 1.2em;
+    margin: 2em 0 1em;
+    text-transform: uppercase;
+    @content;
+
+    &:first-child { margin-top: -.2em; }
+    &:only-child { margin-bottom: 0; }
+}
+h1, .CC-H1 {
+    @include heading() {
+        font-size: 2.5em;
+    }
+    border-bottom: 1px solid $LightGrey;
+    padding-bottom: 1em;
+}
+h2, .CC-H2 {
+    @include heading() {
+        font-size: 1.6rem;
+    }
+}
+h3, .CC-H3 {
+    @include heading() {
+        font-size: 1.4rem;
+    }
+}
+h4, .CC-H4 {
+    @include heading() {
+        font-size: 1em;
+    }
+}
+h5, .CC-H5 {
+    @include heading() {
+        font-size: 1.1em;
+        margin-bottom: 0;
+    }
+}
+h6, .CC-H6 {
+    color: inherit;
+    font-size: .9rem;
+    font-weight: bold;
+    line-height: inherit;
+    margin: 0;
+}
+p, .CC-P {
+    color: inherit;
+    margin: 0 0 1rem 0;
+}
+ul {
+    margin: 0 0 .5rem 20px;
+    li {
+        list-style-type: disc;
+    }
+}
+ol {
+    margin: 0 0 .5rem 20px;
+}
+li {
+    list-style-position: inside;
+    margin: 0 0 1em 0;
+    ul, ol {
+        margin-top: .5em;
+    }
+    li {
+        margin-bottom: .5em;
+    }
+}
+
+dl {
+    @include ClearFix;
+    clear: both;
+    margin: 0 0 1rem;
+}
+dt {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    margin: 0 0 .5em 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 37%;
+    @include breakpoint(large down) {
+        float: none;
+        width: auto;
+    }
+}
+dd {
+    float: left;
+    font-weight: bold;
+    margin: 0 0 .5em 2%;
+    width: 61%;
+    @include breakpoint(large down) {
+        float: none;
+        margin-left: 0;
+        width: auto;
+    }
+}
+sup, sub {
+    font-size: .7em;
+    line-height: 0;
+}
+
+table {
+    margin-bottom: 1rem;
+
+    thead th {
+        background: $Midnight;
+        border: none;
+        color: #fff;
+        font-family: $BasicFontStack;
+        font-size: .8em;
+        font-weight: bold;
+        letter-spacing: .1em;
+        line-height: 18px;
+        padding-bottom: .5em;
+        padding-top: .5em;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+    th {
+        border-bottom: 1px solid $LightGrey;
+        color: $BasicTextColor;
+        font-family: $HeadingFontStack;
+        letter-spacing: $m*.1;
+        padding: 2em;
+        text-align: left;
+        text-transform: uppercase;
+        vertical-align: middle;
+
+        @include breakpoint(medium down) { padding: $m*.5; } 
+    }
+    td {
+        border-bottom: 1px solid $LightGrey;
+        color: $BasicTextColor;
+        font-weight: bold;
+        padding: 2em;
+        text-align: left;
+        vertical-align: middle;
+
+        &:first-child { padding-left: 0; }
+        &:last-child { padding-right: 0; }
+
+        @include breakpoint(medium down) { padding: $m*.5; }
+    }
+    tr:last-child {
+        td, th { border-bottom: none; }
+    }
+    tbody th, tfoot th {
+        font-weight: 800;
+
+        &:first-child { padding-left: 0; }
+        &:last-child { padding-right: 0; }
+        
+        a {
+            text-decoration: none;
+        }
+    }
+}
+blockquote {
+    background: $LightGrey;
+    color: $DarkGrey;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 1.1rem 0;
+    padding: $m;
+    a {
+        color: #37312c;
+    }
+}
+address {
+    @extend p;
+}
+
+::selection {
+    background: rgba(0,0,0,.4);
+}
+::-moz-selection {
+    background: rgba(0,0,0,.4);
+}
+label {
+    font-family: "Zilla Slab";
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    &, &:focus {
+        background-color: #fff;
+        border: 1px solid $MediumGrey;
+        border-radius: 0;
+        box-shadow: none;
+        color: $BasicTextColor;
+        font: normal 13px/1.2em $BasicFontStack;
+        height: auto !important;
+        margin: 0 0 1.5em;
+        max-height: 25px !important;
+        min-height: 1em;
+        padding: .4em .5em;
+        text-align: left;
+        width: 100%;
+
+        &:hover, &:active, &:focus {
+            border-color: $Midnight;
+        }
+
+        @include breakpoint(medium down) { 
+            font-size: 16px !important; max-height: none !important; padding: $m*.6 !important;
+        }
+    }       
+}
+input[type="checkbox"], input[type="radio"] {
+    margin: .4em .5em .4em 0;
+    vertical-align: top;
+}
+html.appearance input[type="checkbox"] {
+    border: 1px solid $LightGrey;
+    border-radius: 2px;
+        box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 0 #c0c0c0;
+    height: 17px;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+    width: 17px;
+            
+    appearance: none;
+    -webkit-appearance: none;
+        
+    &:checked {
+            box-shadow: inset 0 0 0 1px #fff, inset 0 0 0 20px #c0c0c0;
+    }
+}
+::-webkit-input-placeholder {
+    color: $LightGrey;
+    font-size: $m*.8;
+    line-height: 1.2em;
+    opacity: 1;
+    text-transform: uppercase;
+}
+::-moz-placeholder {
+    color: $LightGrey;
+    font-size: $m*.8;
+    line-height: 1.2em;
+    opacity: 1;
+    text-transform: uppercase;
+}
+:-ms-input-placeholder {
+    color: $LightGrey;
+    font-size: $m*.8;
+    line-height: 1.2em;
+    opacity: 1;
+    text-transform: uppercase;
+}
+:-moz-placeholder {
+    color: $LightGrey;
+    font-size: $m*.8;
+    line-height: 1.2em;
+    opacity: 1;
+    text-transform: uppercase;
+}
+textarea {
+    @extend input[type="text"];
+    min-height: 10em !important;
+    max-width: 50rem;
+    resize: vertical;
+    width: 100%;
+}
+select {
+    @extend input[type="text"];
+    background: url('/wp-content/themes/coastalclouds2018/images/icon-select.png') no-repeat right center;
+    background-size: auto 100%;
+    cursor: pointer;
+    display: block;
+    font-size: .75rem;
+    margin-bottom: 1.5em;
+    max-width: 30rem;
+    padding: .4em 42px .4em .5em;
+    text-transform: uppercase;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+button, input[type='submit'], input[type='button'] {
+    @include Button;
+    display: inline-block;
+    text-align: center;
+    html.appearance & {
+        appearance: none;
+        -webkit-appearance: none;
+    }
+}
+fieldset {
+    border: 1px dotted $DarkGrey;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+legend {
+    font: bold 22px/30px $BasicFontStack;
+    padding: 5px;
+    width: auto;
+}
+
+@include breakpoint(medium) { 
+    body {
+        font: 1.1rem/1.4em $BasicFontStack;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+}

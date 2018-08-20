@@ -1,0 +1,35 @@
+var 2.0.3.3 - 14 April, 2017
+- Fixed: list not retrieved error. 
+
+var 2.0.3.2 - 9 March, 2017
+- Fixed: missing subscriber data with contact form 7, WP registration form and wooCommerce checkout form. 
+
+var 2.0.3.1 - 25 February, 2017
+- Fix - Security - Sanitized subscriber data before inserting in the database
+- Fix - PHP 7 compatibility issues
+
+ver 2.0.3 - 21 February, 2017
+- Fixed: http_build_query notice error.
+
+ver 2.0.2 - 9 November, 2016
+- Improvement: Returning more than 10 lists with MAILCHIMP API V3.0
+
+ver 2.0.1 - 2 November, 2016
+- Fixed: Error when user is already subscribed.
+- Improvement: Added support for HTML tags in success/failure message.  
+- Improvement: Upgraded Mail chimp API version to 3.0. 
+
+ver 2.0.0 - 11 May, 2016
+- Improvement: Added Detailed error message for "Something went wrong" case. 
+
+ver 1.0.3 - 31 March, 2016
+- New: Provided support to disable double opt-in option
+
+ver 1.0.2 - 10 March, 2016
+- Improvement: Updated auto update functionality
+
+ver 1.0.1 - 22 February, 2016
+- Fixed - Feature in Debug section to customize display message when same user tries to subscribe again.
+
+ver 1.0.0 - 22 February, 2016
+- Initial Connects - Hub spot Add on

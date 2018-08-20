@@ -1,0 +1,8 @@
+﻿//Main Nav
+@mixin MainNav() { position: relative; z-index: 1;
+
+    &Link { color: $White; font-size: 1.4em; font-weight: bold; }
+}
+
+.KB-MainNavLeft { @include MainNav; }
+.KB-MainNavRight { @include MainNav; }

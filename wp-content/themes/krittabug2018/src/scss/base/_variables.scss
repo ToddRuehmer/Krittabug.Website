@@ -1,0 +1,46 @@
+﻿//Breakpoints
+$bp-medium: 640px;
+$bp-large: 1024px;
+$bp-xlarge: 1200px;
+$bp-xxlarge: 1440px;
+
+//Fonts
+$BasicFontStack: 'Open Sans', sans-serif;
+$HeadingFontStack: 'Open Sans Condensed', sans-serif;
+$ScriptFontStack: 'Hugtophia', sans-serif;
+
+//Colors
+$Blue: #043f8d;
+$LightBlue: #00abd3;
+$FaintBlue: #e3e9f2;
+$Yellow: #fec949;
+$Grey: #3d3e43;
+$DarkGrey: #999;
+$MediumGrey: #ccc;
+$LightGrey: #f2f2f2;
+$NearWhite: #f8f9f3;
+$Eggshell: #f8f9f3;
+$Bronze: #aa885b;
+$Midnight: #032121;
+$Berry: #ea5e7b;
+$Red: #b11623;
+$Gold: #ae9777;
+$Aqua: #6fdfc2;
+
+$White: #fff;
+$BasicTextColor: $Midnight;
+$BasicHeadingColor: #333;
+$Accent: $Blue;
+$LightAccent: lighten($Accent, 10%);
+$Warning: $Red;
+
+//Borders
+$LightBorder: 1px solid $LightGrey;
+$MediumBorder: 4px solid $LightGrey;
+$BoldBorder: 7px solid $LightGrey;
+
+//Units
+$m: 1em; //Base Em Proportion
+
+//Inputs
+$Inputs: 'input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"]';
