@@ -1,7 +1,5 @@
 ﻿//Header
-.KB-Header { align-items: center; box-sizing: border-box; color: $White; display: flex; justify-content: space-between; padding: 1em 0; position: relative; @include GlobalPadding; 
-
-    .home & { height: 100vh; }
+.KB-Header { align-items: center; border: 1px solid #000; border-radius: .25em; bottom: 0; box-shadow: 0 0 30px darken($White,60%); box-sizing: border-box; color: $White; display: flex; justify-content: space-between; margin: .5em 0 .5em .5em; overflow: hidden; padding: 1em 0; position: fixed; left: 0; top: 0; width: 20vw; @include GlobalPadding; 
 
     &Image { background: url('../images/bg-header.jpg') no-repeat center; background-size: cover; bottom: 0; left: 0; position: absolute; right: 0; top: 0;
         &:after { background: rgb(123,5,215); background: linear-gradient(90deg, rgba(123,5,215,1) 0%, rgba(0,212,255,1) 100%); bottom: 0; content: ""; left: 0; mix-blend-mode: multiply; position: absolute; right: 0; top: 0; }

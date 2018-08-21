@@ -1,5 +1,5 @@
 ﻿//Foundation
-@import '../foundation/scss/foundation.scss';
+@import '../../modules/foundation-sites/scss/foundation.scss';
 @include foundation-global-styles;
 
 @include foundation-flex-classes;

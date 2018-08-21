@@ -21,19 +21,13 @@
 
 			<div class="KB-HeaderImage"></div>
 			
-			<nav class="KB-MainNavLeft" role="navigation">
-				<?php foreach (wp_get_nav_menu_items('main-left-navigation') as $key => $menuItem): ?>
-					<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLeftLink"><?php echo $menuItem->title ?></a>
-				<?php endforeach ?>
-			</nav>
-		
 			<a href="<?php echo home_url(); ?>" class="KB-SiteId">
 				Krittabug
 			</a>
-			
-			<nav class="KB-MainNavRight" role="navigation">
-				<?php foreach (wp_get_nav_menu_items('main-right-navigation') as $key => $menuItem): ?>
-					<a href="<?php echo $menuItem->url ?>" class="KB-MainNavRightLink"><?php echo $menuItem->title ?></a>
+				
+			<nav class="KB-MainNav" role="navigation">
+				<?php foreach (wp_get_nav_menu_items('main-navigation') as $key => $menuItem): ?>
+					<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLink"><?php echo $menuItem->title ?></a>
 				<?php endforeach ?>
 			</nav>
 

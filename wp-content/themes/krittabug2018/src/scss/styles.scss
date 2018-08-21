@@ -1,8 +1,8 @@
-﻿//Undos
-@import 'base/undos';
-
-//Foundation
+﻿//Foundation
 @import 'base/foundation';
+
+//Fontawesome
+@import '../modules/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css';
 
 //Variables
 @import 'base/variables';
@@ -21,3 +21,6 @@
 
 //Components
 @import 'components/**/*.scss';
+
+//Pages
+@import 'pages/**/*.scss';

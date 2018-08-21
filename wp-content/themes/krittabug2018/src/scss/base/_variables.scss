@@ -5,11 +5,14 @@ $bp-xlarge: 1200px;
 $bp-xxlarge: 1440px;
 
 //Fonts
-$BasicFontStack: 'Open Sans', sans-serif;
-$HeadingFontStack: 'Open Sans Condensed', sans-serif;
+$BasicFontStack: 'Heuristica', serif;
+$HeadingFontStack: 'Noe', serif;
 $ScriptFontStack: 'Hugtophia', sans-serif;
+$SansFontStack: Helvetica, Arial, sans-serif;
 
 //Colors
+$GreenBlack: #044246;
+$PurpleBlack: #180018;
 $Blue: #043f8d;
 $LightBlue: #00abd3;
 $FaintBlue: #e3e9f2;
@@ -22,14 +25,11 @@ $NearWhite: #f8f9f3;
 $Eggshell: #f8f9f3;
 $Bronze: #aa885b;
 $Midnight: #032121;
-$Berry: #ea5e7b;
 $Red: #b11623;
-$Gold: #ae9777;
-$Aqua: #6fdfc2;
 
-$White: #fff;
-$BasicTextColor: $Midnight;
-$BasicHeadingColor: #333;
+$White: #f1f0f2;
+$BasicTextColor: $PurpleBlack;
+$BasicHeadingColor: $BasicTextColor;
 $Accent: $Blue;
 $LightAccent: lighten($Accent, 10%);
 $Warning: $Red;

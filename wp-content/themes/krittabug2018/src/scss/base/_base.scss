@@ -9,7 +9,37 @@
 
 }
 
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@font-face {
+    font-family: 'Noe';
+    src: url('../fonts/NoeDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/NoeDisplay-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heuristica';
+    src: url('../fonts/Heuristica-Bold.woff2') format('woff2'),
+        url('../fonts/Heuristica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heuristica';
+    src: url('../fonts/Heuristica-Regular.woff2') format('woff2'),
+        url('../fonts/Heuristica-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Heuristica';
+    src: url('../fonts/Heuristica-Italic.woff2') format('woff2'),
+        url('../fonts/Heuristica-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
 
 //Toolbox
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -55,13 +85,14 @@ html {
 
 body {
     color: $BasicTextColor;
-    font: 16px/26px $BasicFontStack;
+    font: 16px/1.2em $BasicFontStack;
     overflow-x: hidden;
 
     @include breakpoint(small) { font-size: 2vw; }
 }
 a {
     color: $Accent;
+    text-decoration: none;
     word-wrap: break-word;
     &:hover {
         color: lighten($Accent, 15%);
@@ -82,7 +113,6 @@ em {
 }
 
 @mixin heading() {
-    color: $BasicHeadingColor;
     font-family: $HeadingFontStack;
     font-weight: bold;
     line-height: 1.2em;
@@ -96,8 +126,6 @@ h1, .KB-H1 {
     @include heading() {
         font-size: 2.5em;
     }
-    border-bottom: 1px solid $LightGrey;
-    padding-bottom: 1em;
 }
 h2, .KB-H2 {
     @include heading() {
@@ -264,35 +292,32 @@ address {
     background: rgba(0,0,0,.4);
 }
 label {
-    font-family: "Zilla Slab";
+    color: inherit;
+    font-family: $HeadingFontStack;
     font-size: 1em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
 }
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
-    &, &:focus {
-        background-color: #fff;
-        border: 1px solid $MediumGrey;
-        border-radius: 0;
-        box-shadow: none;
-        color: $BasicTextColor;
-        font: normal 13px/1.2em $BasicFontStack;
-        height: auto !important;
-        margin: 0 0 1.5em;
-        max-height: 25px !important;
-        min-height: 1em;
-        padding: .4em .5em;
-        text-align: left;
-        width: 100%;
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    background-color: #fff;
+    border: 1px solid $MediumGrey;
+    border-radius: 0;
+    box-shadow: none;
+    color: $BasicTextColor;
+    font: normal 1em/1.2em $BasicFontStack;
+    height: auto !important;
+    margin: 0 0 1.5em;
+    max-height: 25px !important;
+    min-height: 1em;
+    padding: 1em;
+    text-align: left;
+    width: 100%;
 
-        &:hover, &:active, &:focus {
-            border-color: $Midnight;
-        }
+    &:hover, &:active, &:focus {
+        border-color: $Midnight;
+    }
 
-        @include breakpoint(medium down) { 
-            font-size: 16px !important; max-height: none !important; padding: $m*.6 !important;
-        }
-    }       
+    @include breakpoint(medium down) { 
+        font-size: 16px !important; max-height: none !important; padding: $m*.6 !important;
+    }   
 }
 input[type="checkbox"], input[type="radio"] {
     margin: .4em .5em .4em 0;

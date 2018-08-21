@@ -32,7 +32,7 @@
 	}
 }
 
-@mixin Button($bg:$Aqua, $text:#fff) {    
+@mixin Button($bg:$BasicTextColor, $text:#fff) {    
     background: $bg;
 	border: none;
 	border-radius: 0 !important;

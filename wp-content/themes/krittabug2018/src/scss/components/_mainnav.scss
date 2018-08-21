@@ -1,8 +1,7 @@
 ﻿//Main Nav
-@mixin MainNav() { position: relative; z-index: 1;
+@mixin MainNav() { display: flex; justify-content: space-around; position: absolute; top: 3em; z-index: 1;
 
     &Link { color: $White; font-size: 1.4em; font-weight: bold; }
 }
 
-.KB-MainNavLeft { @include MainNav; }
-.KB-MainNavRight { @include MainNav; }
+.KB-MainNav { @include MainNav; left: 2.5em; right: 2.5em; }
