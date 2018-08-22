@@ -1,7 +1,8 @@
 ﻿//Articles
-.KB-Article { border-radius: .25em; color: $White; margin-bottom: .5em; overflow: hidden; position: relative;
+.KB-Articles { position: relative; }
+.KB-Article { border-radius: .25em; color: $White; margin: 0 .5em .5em 0; overflow: hidden; position: absolute; width: calc(50% - .5em);
     
-    &Header { display: flex; align-items: flex-end;
+    &Header { background: rgb(123,5,215); display: flex; align-items: flex-end;
 
         &:after { background: rgb(123,5,215); background: linear-gradient(90deg, rgba(123,5,215,1) 0%, rgba(0,212,255,1) 100%); bottom: 0; content: ""; left: 0; mix-blend-mode: multiply; position: absolute; right: 0; top: 0; }
 
@@ -10,7 +11,7 @@
             .KB-ArticleImage + & { margin-left: -100%; }
         }
     }
-    &Title { margin-bottom: 0; 
+    &Title { font-size: 1em; margin-bottom: 0; 
     
         a { color: $White; }
     }

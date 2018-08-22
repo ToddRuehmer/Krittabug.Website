@@ -12,8 +12,14 @@
 // Load styles
 function krittabug2018_styles()
 {
-    wp_register_style('krittabug2018', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
-    wp_enqueue_style('krittabug2018');
+    wp_enqueue_style('krittabug2018', get_template_directory_uri() . '/css/main.css', array(), '1.0', 'all');
+}
+
+// Load styles
+function krittabug2018_scripts()
+{
+    wp_enqueue_script('krittabug2018-plugins-js', get_template_directory_uri() . '/js/plugins.min.js', array(), '1.0', 'all');
+    wp_enqueue_script('krittabug2018-main-js', get_template_directory_uri() . '/js/main.min.js', array(), '1.0', 'all');
 }
 
 /*------------------------------------*\
@@ -53,6 +59,7 @@ function getContentImage() {
 //add_action('wp_print_scripts', 'krittabug2018_conditional_scripts'); // Add Conditional Page Scripts
 //add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'krittabug2018_styles'); // Add Theme Stylesheet
+add_action('wp_enqueue_scripts', 'krittabug2018_scripts'); // Add Theme Scripts
 //add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 //add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 //add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()

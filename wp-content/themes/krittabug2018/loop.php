@@ -1,9 +1,9 @@
-<?php 
-	if (have_posts()): while (have_posts()) : the_post(); 
-?>
+<section class="KB-Articles KB-Articles_js">
+
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 	<!-- article -->
-	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article'); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article KB-Article_js'); ?>>
 
 		<header class="KB-ArticleHeader">
 			<img src="<?php echo getContentImage(); ?>" class="KB-ArticleImage" />
@@ -31,6 +31,8 @@
 	<!-- /article -->
 
 <?php endwhile; ?>
+
+</section>
 
 <?php else: ?>
 
