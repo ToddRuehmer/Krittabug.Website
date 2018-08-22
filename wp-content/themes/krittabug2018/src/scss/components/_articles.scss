@@ -4,7 +4,7 @@
     
     &Header { background: rgb(123,5,215); display: flex; align-items: flex-end;
 
-        &:after { background: rgb(123,5,215); background: linear-gradient(90deg, rgba(123,5,215,1) 0%, rgba(0,212,255,1) 100%); bottom: 0; content: ""; left: 0; mix-blend-mode: multiply; position: absolute; right: 0; top: 0; }
+        &:after { background: rgba($Blue,.8); bottom: 0; content: ""; left: 0; position: absolute; right: 0; top: 0; }
 
         &Content { padding: 2em 1em 1em; position: relative; z-index: 1; 
         

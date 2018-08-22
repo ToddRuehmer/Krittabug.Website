@@ -1018,7 +1018,7 @@
 
 /* line 5, src/scss/components/_articles.scss */ .KB-ArticleHeader { background: #7b05d7; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
 
-/* line 7, src/scss/components/_articles.scss */ .KB-ArticleHeader:after { background: #7b05d7; background: -webkit-gradient(linear, left top, right top, from(#7b05d7), to(#00d4ff)); background: -webkit-linear-gradient(left, #7b05d7 0%, #00d4ff 100%); background: linear-gradient(90deg, #7b05d7 0%, #00d4ff 100%); bottom: 0; content: ""; left: 0; mix-blend-mode: multiply; position: absolute; right: 0; top: 0; }
+/* line 7, src/scss/components/_articles.scss */ .KB-ArticleHeader:after { background: rgba(4, 63, 141, 0.8); bottom: 0; content: ""; left: 0; position: absolute; right: 0; top: 0; }
 
 /* line 9, src/scss/components/_articles.scss */ .KB-ArticleHeaderContent { padding: 2em 1em 1em; position: relative; z-index: 1; }
 
