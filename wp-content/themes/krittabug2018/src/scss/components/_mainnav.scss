@@ -1,7 +1,11 @@
 ﻿//Main Nav
-@mixin MainNav() { justify-content: space-around; z-index: 1;
+@mixin MainNav() { font-family: $SansFontStack; z-index: 1;
 
-    &Link { color: $White; font-size: 1.4em; font-weight: bold; }
+    &Link { color: $White; display: inline-block; font-size: 1.4em; font-weight: bold; margin-left: 1em; padding-top: .45em; 
+    
+        &:nth-child(1) { color: $Kelly; }
+        &:nth-child(2) { color: $Plum; }
+    }
 }
 
-.KB-MainNav { @include MainNav; left: 2.5em; right: 2.5em; }
+.KB-MainNav { @include MainNav; }
