@@ -1,20 +1,25 @@
-﻿//Articles
-.KB-Articles { position: relative; }
+//Articles
+.KB-Articles { margin-right: -.5em; position: relative; }
 .KB-Article { border-radius: .25em; color: $White; margin: 0 .5em .5em 0; overflow: hidden; position: absolute; width: calc(50% - .5em);
+
+    &:last-child { margin-bottom: 0; }
     
-    &Header { background: rgb(123,5,215); display: flex; align-items: flex-end;
-
-        &:after { background: rgba($Blue,.8); bottom: 0; content: ""; left: 0; position: absolute; right: 0; top: 0; }
-
+    &Header { background: $GreenBlack; background-position: center; background-size: cover; display: flex; align-items: flex-end;
+    
         &Content { padding: 2em 1em 1em; position: relative; z-index: 1; 
-        
-            .KB-ArticleImage + & { margin-left: -100%; }
+
+            &:after { background: linear-gradient(to bottom, rgba($GreenBlack,0) 0%, rgba($GreenBlack,1) 100%); bottom: 0; content: ""; height: calc(100% + 1em); left: -50%; min-height: 10em; position: absolute; right: -50%; z-index: -1; }
         }
     }
-    &Title { font-size: 1em; margin-bottom: 0; 
     
+    &Title { font-size: 1em; margin-bottom: 0; 
+        
         a { color: $White; }
     }
 
+    &Image { visibility: hidden; }
+    
     &Link { bottom: 0; display: block; left: 0; position: absolute; right: 0; top: 0; z-index: 1; }
+    
+    .KB-ArticleImage + .KB-ArticleHeaderContent { margin-left: -100%; }
 }

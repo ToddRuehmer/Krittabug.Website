@@ -1,5 +1,5 @@
 ﻿//Main Nav
-@mixin MainNav() { display: flex; justify-content: space-around; position: absolute; top: 3em; z-index: 1;
+@mixin MainNav() { justify-content: space-around; z-index: 1;
 
     &Link { color: $White; font-size: 1.4em; font-weight: bold; }
 }

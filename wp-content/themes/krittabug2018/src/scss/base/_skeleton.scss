@@ -1,34 +1,13 @@
 ﻿//Skeleton
+
+@mixin pageRow { margin: $Unit; }
+
+
+
+
 body { background: $White; color: $BasicTextColor; }
 
-.CC-LayoutConstraint { padding-left: 6vw; padding-right: 6vw; @include grid-row;
-    & & { padding-left: 0; padding-right: 0; }
-    
-    @include breakpoint(small) { 
-        max-width: rem-calc(map-get($breakpoints, small)) - 2rem !important;
-    }
-    @include breakpoint(large) { 
-        max-width: rem-calc(map-get($breakpoints, large)) - 2rem !important;
-    }
-    @include breakpoint(xlarge) { 
-        max-width: rem-calc(map-get($breakpoints, xlarge)) - 2rem !important;
-    }
-    @include breakpoint(xxlarge) { 
-        max-width: rem-calc(map-get($breakpoints, xxlarge)) - 2rem !important;
-    }
-}
-
-.CC-Main { background: $White; position: relative; transform: translateZ(0); z-index: 1; 
-
-    body:not(.home) & { 
-        @include breakpoint(medium down) { padding-top: $m*8; }
-    }
-}
-
-.entry-wrap { padding-top: 0; 
-
-    @media (max-width: 480px) { padding-left: 0; padding-right: 0; }
-}
-
-.x-column { margin-bottom: 3em; }
-.x-content-band { margin: 0; }
+//PageTop
+.KB-PageTop { @include pageRow; position: relative; }
+//Main
+.KB-Main { font-size: .8em; padding: 3em 0; @include GlobalPadding; padding-left: 2.5em; }

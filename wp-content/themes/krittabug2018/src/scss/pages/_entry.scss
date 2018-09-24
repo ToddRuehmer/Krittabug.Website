@@ -1,0 +1,8 @@
+//Entry Page
+.single {
+
+    .KB-Header { position: fixed; width: 25vw; }
+    
+    //Main
+    .KB-Main { font-size: .8em; margin-left: 25vw; padding: 3em 0; @include GlobalPadding; padding-left: 2.5em; }
+}

@@ -1,7 +1,5 @@
 //Home Page
-.home {
+.home:not(.paged) {
 
-    .KB-Header { width: 50vw; }
-
-    .KB-Main { font-size: 1em; margin: .5em 0 0 calc(50vw + 1em); padding: 0; }
+    .KB-Main { font-size: 1em; margin: 0 0 0 calc(40vw + 1em); }
 }

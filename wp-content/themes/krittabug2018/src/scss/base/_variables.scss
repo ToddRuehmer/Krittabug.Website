@@ -11,10 +11,12 @@ $ScriptFontStack: 'Hugtophia', sans-serif;
 $SansFontStack: Helvetica, Arial, sans-serif;
 
 //Colors
-$GreenBlack: #044246;
+$GreenBlack: #0a3233;
 $PurpleBlack: #180018;
 $Blue: #043f8d;
 $LightBlue: #00abd3;
+$Kelly: #008d55;
+$Candy: #ef4b3f;
 $FaintBlue: #e3e9f2;
 $Yellow: #fec949;
 $Grey: #3d3e43;
@@ -24,7 +26,7 @@ $LightGrey: #f2f2f2;
 $NearWhite: #f8f9f3;
 $Eggshell: #f8f9f3;
 $Bronze: #aa885b;
-$Midnight: #032121;
+$Midnight: #2b2823;
 $Red: #b11623;
 
 $White: #f1f0f2;
@@ -38,6 +40,9 @@ $Warning: $Red;
 $LightBorder: 1px solid $LightGrey;
 $MediumBorder: 4px solid $LightGrey;
 $BoldBorder: 7px solid $LightGrey;
+
+//Units
+$Unit: 2em;
 
 //Units
 $m: 1em; //Base Em Proportion

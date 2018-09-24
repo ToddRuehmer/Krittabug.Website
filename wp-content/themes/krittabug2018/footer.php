@@ -1,5 +1,5 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<footer class="KB-Footer" role="contentinfo">
 
 				<!-- copyright -->
 				<p class="copyright">
@@ -12,6 +12,13 @@
 			<!-- /footer -->
 
 		<?php wp_footer(); ?>
+
+		<?php
+			global $script;
+			if(!empty($script)) {
+				echo $script;
+			}
+		?>
 
 	</body>
 </html>

@@ -1,11 +1,17 @@
 <section class="KB-Articles KB-Articles_js">
 
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php
+	$loop = new WP_Query(array(
+		'offset' => 1
+	));
+
+	if ($loop->have_posts()): while ($loop->have_posts()) : $loop->the_post(); 
+?>
 
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article KB-Article_js'); ?>>
 
-		<header class="KB-ArticleHeader">
+		<header class="KB-ArticleHeader" style="background-image: url('<?php echo getContentImage(); ?>');">
 			<img src="<?php echo getContentImage(); ?>" class="KB-ArticleImage" />
 			
 			<section class="KB-ArticleHeaderContent">
@@ -20,7 +26,6 @@
 				<span class="KB-CommentsCount">
 					<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
 				</span>
-				<?php edit_post_link(); ?>
 				<!-- /post details -->
 			</section>
 		</header>
@@ -34,6 +39,16 @@
 
 </section>
 
+<section class="KB-PostsNav">
+	<?php
+		add_filter('previous_posts_link_attributes', function(){ return 'class="KB-PostsNavLink"'; });
+		add_filter('next_posts_link_attributes', function(){ return 'class="KB-PostsNavLink"'; }); 
+		$nextLabel = is_paged() ? "Next" : "See More Posts"; 
+	?>
+	<?php previous_posts_link( "Back" , $max_pages ); ?>
+	<?php next_posts_link( $nextLabel , $max_pages ); ?>
+</section>
+
 <?php else: ?>
 
 	<!-- article -->
@@ -43,3 +58,14 @@
 	<!-- /article -->
 
 <?php endif; ?>
+
+<?php
+	global $script;
+	if ( !is_paged() ):
+	$script =  '<script>
+	masonries.init(function() {
+		sticky.init();
+	});
+	</script>';
+	echo $script;
+endif; ?>

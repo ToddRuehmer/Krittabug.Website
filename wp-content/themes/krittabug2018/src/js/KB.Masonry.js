@@ -1,9 +1,11 @@
 var masonries = {
     $target: {},
     masonries: [],
-    init() {
+    callback: function() {},
+    init(callback) {
         var self = this;
 
+        self.callback = callback;
         self.$target = $('.KB-Articles_js');
         self.run();
     },
@@ -13,15 +15,20 @@ var masonries = {
         $.each(self.$target, function() {
             var $target = $(this);
 
-            self.masonries.push(new Masonry({$wrapper:$('.KB-Articles_js'), $articles:$('.KB-Article_js')}));
+            self.masonries.push(new Masonry({
+                $wrapper:$('.KB-Articles_js'), 
+                $articles:$('.KB-Article_js'),
+                callback: self.callback
+            }));
         });
     }
 }
 
 class Masonry {
-    constructor(options = {$wrapper:{},$articles:{}}) {
+    constructor(options = {$wrapper:{},$articles:{},callback:function(){}}) {
         var self = this;
 
+        self.callback = options.callback;
         self.$wrapper = options.$wrapper;
         self.$articles = options.$articles;
         self.$images = this.$wrapper.find('img');
@@ -67,6 +74,7 @@ class Masonry {
         });
 
         self.$wrapper.css({height:self.highest});
+        self.callback();
     }
 };
 
