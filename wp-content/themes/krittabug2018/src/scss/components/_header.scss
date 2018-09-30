@@ -1,1 +1,1 @@
-.KB-Header { background: $GreenBlack; box-sizing: border-box; color: $BasicTextColor; display: flex; justify-content: space-between; left: 0; padding: 2em 2em .6em; position: relative; top: 0; }
+.KB-Header { align-items: center; box-sizing: border-box; color: $BasicTextColor; display: flex; flex-wrap: wrap; justify-content: flex-start; left: 0; padding: 2em 0 2em 2em; position: fixed; top: 0; width: 25vw; z-index: 1; }

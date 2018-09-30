@@ -1,0 +1,22 @@
+.KB-MenuTrigger { cursor: pointer; height: 1.2em; margin-right: 1.5em; position: relative; width: 1.4em;
+
+    svg { cursor: pointer; }
+    svg:nth-child(1) { left: 0; position: absolute; top: 0; width: 100%; 
+    
+        path { fill: $Kelly; }
+    }
+    svg:nth-child(2) { left: 0; position: absolute; top: 50%; transform: translate(0,-50%); width: 100%; 
+    
+        path { fill: $Kelly; }
+    }
+    svg:nth-child(3) { bottom: 0; position: absolute; width: 100%; 
+    
+        path { fill: $Kelly; }
+    }
+
+    &:hover {
+        svg:nth-child(1) { transform: translate(5%,0); }
+        svg:nth-child(2) { transform: translate(-5%,-50%); }
+        svg:nth-child(3) { transform: translate(5%,0); }
+    }
+}

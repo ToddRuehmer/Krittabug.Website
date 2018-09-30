@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php include 'top.php'; ?>
+
 <section class="KB-PageTop KB-PageTop_js">
 
 <?php
@@ -31,6 +33,12 @@
 					<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
 				</span>
 				<!-- /post details -->
+
+				<!-- post excerpt -->
+				<section class="KB-ArticleExcerpt">
+					<?php the_excerpt(); ?>
+				</section>
+				<!-- /post excerpt -->
 			</section>
 		</header>
 

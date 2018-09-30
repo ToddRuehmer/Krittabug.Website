@@ -12,7 +12,9 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article KB-Article_js'); ?>>
 
 		<header class="KB-ArticleHeader" style="background-image: url('<?php echo getContentImage(); ?>');">
-			<img src="<?php echo getContentImage(); ?>" class="KB-ArticleImage" />
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="KB-ArticleImage">
+				<img src="<?php echo getContentImage(); ?>" />
+			</a>
 			
 			<section class="KB-ArticleHeaderContent">
 				<!-- post title -->
@@ -27,6 +29,12 @@
 					<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
 				</span>
 				<!-- /post details -->
+
+				<!-- post excerpt -->
+				<section class="KB-ArticleExcerpt">
+					<?php the_excerpt(); ?>
+				</section>
+				<!-- /post excerpt -->
 			</section>
 		</header>
 
@@ -64,8 +72,10 @@
 	if ( !is_paged() ):
 	$script =  '<script>
 	masonries.init(function() {
-		sticky.init();
+        var headerSticky = new Sticky({
+            $wrapper: $(\'.KB-PageTop_js\'), 
+            $sticky: $(\'.KB-ArticlesHeader_js\')
+        });
 	});
 	</script>';
-	echo $script;
 endif; ?>

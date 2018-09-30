@@ -1,5 +1,6 @@
 .KB-Entry {
 
-    &Header { bottom: 0; left: 0; padding: 0 2em 2em; position: fixed; width: 25vw; }
-    &Title { font-size: 1.75em; margin: 0 0 0; }
+    &Top { position: relative; }
+    &Header { margin: 3em 0 0; }
+    &Title { color: $Blue; font-size: 1.75em; margin: 0; }
 }

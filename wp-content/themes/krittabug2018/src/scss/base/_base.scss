@@ -301,12 +301,39 @@ address {
 }
 label {
     color: inherit;
-    font-family: $HeadingFontStack;
-    font-size: 1em;
+    font-family: $BasicFontStack;
+    font-size: .75em;
 }
-textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
-    background-color: #fff;
-    border: 1px solid $MediumGrey;
+input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+    background: none;
+    border: 3px dotted $Grey;
+    border-width: 0 0 3px 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: $BasicTextColor;
+    font: normal .7em/1.2em $SansFontStack;
+    height: auto !important;
+    margin: 0 0 1.5em;
+    max-height: 25px !important;
+    min-height: 1em;
+    padding: 1em 0;
+    text-align: left;
+    width: 100%;
+
+    &:focus {
+        background: rgba($White, .5);
+        border: 3px dotted $Grey;
+        border-width: 0 0 3px 0;
+        box-shadow: none;
+    }
+
+    @include breakpoint(medium down) { 
+        font-size: 16px !important; max-height: none !important; padding: $m*.6 !important;
+    }   
+}
+textarea {
+    background: none;
+    border: 3px solid $Grey;
     border-radius: 0;
     box-shadow: none;
     color: $BasicTextColor;
@@ -319,8 +346,9 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
     text-align: left;
     width: 100%;
 
-    &:hover, &:active, &:focus {
-        border-color: $Midnight;
+    &:focus {
+        background: rgba($White, .5);
+        border: 3px solid $Grey;
     }
 
     @include breakpoint(medium down) { 

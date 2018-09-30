@@ -4,10 +4,12 @@
 </div>
 
 	<?php return; endif; ?>
-
-<?php if (have_comments()) : ?>
-
-	<h2><?php comments_number(); ?></h2>
+	
+	<?php if (have_comments()) : ?>
+	
+	<span class="KB-CommentsCount">
+		<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
+	</span>
 
 	<ul>
 		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>

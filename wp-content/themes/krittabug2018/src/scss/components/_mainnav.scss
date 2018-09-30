@@ -1,7 +1,7 @@
 ﻿//Main Nav
-@mixin MainNav() { font-family: $SansFontStack; z-index: 1;
+@mixin MainNav() { display: none; flex-basis: 100%; font-family: $SansFontStack; z-index: 1;
 
-    &Link { color: $White; display: inline-block; font-size: 1.4em; font-weight: bold; margin-left: 1em; padding-top: .45em; 
+    &Link { color: $White; display: block; font-weight: bold; padding-top: .45em; 
     
         &:nth-child(1) { color: $Kelly; }
         &:nth-child(2) { color: $Plum; }

@@ -1,21 +1,17 @@
-var sticky = {
-    $wrapper: {},
-    $sticky: {},
-    scrollTop: 0,
-    stickAt: 0,
-    init() {
+class Sticky {
+    constructor(options = {$wrapper,$sticky}) {
         var self = this;
 
-        self.$wrapper = $('.KB-PageTop_js');
-        self.$sticky = $('.KB-ArticlesHeader_js');
-        self.run();
-    },
-    run() {
-        var self = this;
+        self.$wrapper = options.$wrapper;
+        self.$sticky = options.$sticky;
+        console.log(options);
+        self.scrollTop = 0;
+        self.stickAt = 0;
         
         self.getSizes.bind(self)();
         self.animate.bind(self)();
-    },
+    }
+
     animate() {
         window.requestAnimationFrame(this.animate.bind(this));
 
@@ -23,12 +19,11 @@ var sticky = {
         if (this.scrollTop < this.staticAt) {
             this.$sticky.addClass('KB-ArticlesHeader_static').removeClass('KB-ArticlesHeader_stuck');
         } else if (this.scrollTop >= this.stickAt) {
-            console.log('stuck');
             this.$sticky.addClass('KB-ArticlesHeader_stuck').removeClass('KB-ArticlesHeader_static');
         } else {
             this.$sticky.removeClass('KB-ArticlesHeader_stuck KB-ArticlesHeader_static');
         }
-    },
+    };
     getSizes() {
         var self = this;
 
@@ -40,4 +35,4 @@ var sticky = {
             self.getSizes.bind(self)();
         });
     }
-}
+};

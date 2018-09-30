@@ -1,5 +1,5 @@
 ﻿//Site ID
-.KB-SiteId { color: $White; font-family: $ScriptFontStack; position: relative; z-index: 1; 
+.KB-SiteId { color: $White; font-family: $ScriptFontStack; margin-top: .2em; position: relative; z-index: 1; 
 
-    svg { max-width: 10em; width: 100%; }
+    svg { display: block; max-width: 10em; width: 100%; }
 }

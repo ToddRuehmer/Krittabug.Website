@@ -1,63 +1,59 @@
 <?php get_header(); ?>
 
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-		<header class="KB-EntryHeader">
-			<!-- post title -->
-			<h1 class="KB-EntryTitle">
-				<?php the_title(); ?>
-			</h1>
-			<!-- /post title -->
-		
-			<!-- post details -->
-			<span class="KB-Date"><?php the_time('F j, Y'); ?></span>
-			<span class="KB-CommentsCount">
-				<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
-			</span>
-			<!-- /post details -->
-		</header>
-
-		<main role="main" class="KB-Main">
+	<section class="KB-EntryTop KB-EntryTop_js">
 	
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Entry'); ?>>
-
-				<?php the_content(); // Dynamic Content ?>
-
-				<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-				<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
-
-				<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			</article>
-			<!-- /article -->
+		<?php include 'top.php'; ?>
 	
-		</main>
+			<main role="main" class="KB-Main">
+			
+				<!-- article -->
+				<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Entry'); ?>>
+	
+					<?php the_content(); // Dynamic Content ?>
+	
+				</article>
+				<!-- /article -->
+	
+			</main>
+	
+	</section>
 
-		<section class="KB-Comments">
+	<section class="KB-Comments">
 
-			<?php comments_template(); ?>
+		<?php comments_template(); ?>
 
-		</section>
+	</section>
 
-	<?php endwhile; ?>
+<?php endwhile; ?>
 
-	<?php else: ?>
+<?php else: ?>
 
-		<main role="main" class="KB-Main">
+	<main role="main" class="KB-Main">
 
-			<!-- article -->
-			<article>
+		<!-- article -->
+		<article>
 
-				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
-			</article>
-			<!-- /article -->
+		</article>
+		<!-- /article -->
 
-		</main>
+	</main>
 
-	<?php endif; ?>
+<?php endif; ?>
+
+<?php
+	global $script;
+	$script = '
+	<script>
+	var headerSticky = new Sticky({
+		$wrapper: $(\'.KB-EntryTop_js\'), 
+		$sticky: $(\'.KB-Header_js\')
+	});
+	</script>
+	';
+?>
 
 <?php get_footer(); ?>

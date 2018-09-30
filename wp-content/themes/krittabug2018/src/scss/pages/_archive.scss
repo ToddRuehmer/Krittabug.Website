@@ -1,5 +1,33 @@
 //Archive
-.home {
+.home.paged {
 
     .KB-Main { padding: 0; }
+
+    .KB-Articles { margin-right: 0; }
+    .KB-Article { color: $BasicTextColor; margin-bottom: $Unit*1.5; overflow: visible; position: static; width: auto; 
+    
+        &Header { align-items: center; background: none !important; 
+        
+            &Content { padding: 0;
+                
+                &:after { display: none; }
+            }
+        }
+        &Title { font-size: 2em;
+
+            a { color: $BasicTextColor; }
+        }
+        &Image { border-radius: .25em; display: block; margin-right: $Unit; max-width: 20vw; overflow: hidden; visibility: visible; width: 100%; }
+        &Excerpt { display: block; margin-top: 1em;
+
+            p { margin: 0; }
+        }
+
+        .KB-ArticleImage + .KB-ArticleHeaderContent { margin: 0; }
+
+        &Link { display: none; }
+    }
+
+    .KB-Date { font-size: 1em; }
+    .KB-CommentsCount { font-size: 1em; }
 }

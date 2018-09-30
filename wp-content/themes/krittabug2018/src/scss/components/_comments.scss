@@ -1,1 +1,10 @@
-.KB-Comments { background: darken($White, 10%); padding: 2em 0; @include GlobalPadding; padding-left: calc(20vw + 2em); }
+.KB-Comments { background: darken($White, 10%); font-family: $SansFontStack; padding: 2em 0; @include GlobalPadding; padding-left: calc(25vw + 2em); position: relative; 
+
+    .KB-CommentsCount { font-size: 2em; left: 0; margin: $Unit*.5 0 $Unit*.5 $Unit*.5; position: absolute; top: 0; }
+}
+
+.comment-notes { font-size: .75em; }
+.comment-form-comment { margin-bottom: $Unit*.25; }
+.comment-form-author { float: left; margin-right: 5%; width: 30%; }
+.comment-form-email { float: left; margin-right: 5%; width: 30%; }
+.comment-form-url { float: left; width: 30%; }
