@@ -1,4 +1,27 @@
 ﻿//Footer
-.KB-Footer { background: $GreenBlack; color: $white; min-height: 50vh; padding: 1em;
+.KB-Footer { background: $Blue; color: $white; min-height: 50vh;
+ 
+    &Recents { align-items: flex-end; background: $GreenBlack; color: $Mint; display: flex; padding: 2em 0 2em 2.5em; 
     
+        a { color: $Mint; }
+    }
+    &Article { flex: 1; margin-right: 2.5em; }
+
+    &About { display: flex; padding: 2.5em;
+
+        a { color: $White; }
+        &Image { flex: 1; margin-right: 2.5em; }
+        &Content { flex: 2; font-size: .7em; }
+        &Social { flex: 1; margin-left: 5em; 
+        
+            a { display: block; }
+        }
+    }
+
+    &Bottom { align-items: center; background: $Plum; color: $Candy; display: flex; font-family: $SansFontStack; justify-content: space-between; padding: 1.5em 2.5em 1em; }
+    &Copyright { font-size: .8em; line-height: 1.2em; }
+    &Nav { font-size: 1.4em;
+
+        &Link { color: $Candy; font-weight: bold; margin-left: 1.5em; }
+    }
 }

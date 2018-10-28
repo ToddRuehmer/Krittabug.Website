@@ -1,6 +1,6 @@
 <header class="KB-Header KB-Header_js">
 
-	<div class="KB-MenuTrigger">
+	<div class="KB-MenuTrigger KB-MenuTrigger_js">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
 			<path fill="#E41B49" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
 		</svg>
@@ -26,13 +26,16 @@
 		</svg>
 	</a>
 	
-	<nav class="KB-MainNav" role="navigation">
+	<nav class="KB-MainNav KB-MainNav_js" role="navigation">
 		<?php foreach (wp_get_nav_menu_items('main-navigation') as $key => $menuItem): ?>
-			<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLink"><?php echo $menuItem->title ?></a>
+			<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLink KB-MainNavLink_js"><?php echo $menuItem->title ?></a>
 		<?php endforeach ?>
+		<section class="KB-MainNavSidebar KB-MainNavSidebar_js">
+			<?php get_sidebar(); ?>
+		</section>
 	</nav>
 
-	<?php if(is_single()): ?>
+	<?php if(is_single() || is_page()): ?>
 		<header class="KB-EntryHeader">
 			<!-- post title -->
 			<h1 class="KB-EntryTitle">
@@ -41,10 +44,14 @@
 			<!-- /post title -->
 
 			<!-- post details -->
-			<span class="KB-Date"><?php the_time('F j, Y'); ?></span>
-			<span class="KB-CommentsCount">
-				<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
-			</span>
+			<?php if(!is_page()): ?>
+				<span class="KB-Date"><?php the_time('F j, Y'); ?></span>
+				<?php if (get_comments_number() > 0): ?>
+					<span class="KB-CommentsCount">
+						<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
+					</span>
+				<?php endif; ?>
+			<?php endif; ?>
 			<!-- /post details -->
 		</header>
 	<?php endif; ?>

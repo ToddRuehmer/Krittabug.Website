@@ -6,12 +6,12 @@
 	<?php return; endif; ?>
 	
 	<?php if (have_comments()) : ?>
-	
+
 	<span class="KB-CommentsCount">
 		<i class="far fa-comments KB-CommentsCountIcon"></i> <?php echo comments_number( __( 0 ), __( 1 ), __( '%' )); ?>
 	</span>
 
-	<ul>
+	<ul class="KB-CommentsList">
 		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>
 	</ul>
 

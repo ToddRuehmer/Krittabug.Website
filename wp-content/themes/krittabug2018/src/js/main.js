@@ -1,2 +1,3 @@
 (function($) {
+    mainMenu.init();
 })(jQuery);

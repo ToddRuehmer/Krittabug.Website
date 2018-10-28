@@ -1,45 +1,35 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<section class="KB-EntryTop KB-EntryTop_js">
 
-			<h1><?php the_title(); ?></h1>
+	<?php include 'top.php'; ?>
 
+	<main role="main" class="KB-Main">
+	
+		<!-- article -->
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Entry'); ?>>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<?php the_content(); // Dynamic Content ?>
 
-				<?php the_content(); ?>
+		</article>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+<?php endwhile; ?>
 
-				<br class="clear">
+<?php else: ?>
 
-				<?php edit_post_link(); ?>
+	<!-- article -->
+	<article>
 
-			</article>
-			<!-- /article -->
+		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
 
-		<?php endwhile; ?>
+	</article>
 
-		<?php else: ?>
+<?php endif; ?>
+		<!-- /article -->
 
-			<!-- article -->
-			<article>
-
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
-			</article>
-			<!-- /article -->
-
-		<?php endif; ?>
-
-		</section>
-		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
+</section>
 
 <?php get_footer(); ?>

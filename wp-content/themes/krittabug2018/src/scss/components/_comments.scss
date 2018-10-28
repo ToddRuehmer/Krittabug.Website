@@ -1,6 +1,17 @@
 .KB-Comments { background: darken($White, 10%); font-family: $SansFontStack; padding: 2em 0; @include GlobalPadding; padding-left: calc(25vw + 2em); position: relative; 
 
     .KB-CommentsCount { font-size: 2em; left: 0; margin: $Unit*.5 0 $Unit*.5 $Unit*.5; position: absolute; top: 0; }
+
+    .KB-CommentsList { margin: 0; 
+    
+        .comment { display: flex; flex-wrap: wrap; margin: 0 0 $m 0; 
+        
+            .children { flex-basis: 100%; }
+        }
+    }
+
+    .KB-CommentImage { flex: 1; }
+    .KB-CommentMain { flex: 5; }
 }
 
 .comment-notes { font-size: .75em; }

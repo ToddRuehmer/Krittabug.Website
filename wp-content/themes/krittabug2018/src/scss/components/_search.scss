@@ -1,0 +1,7 @@
+.KB-Search { 
+    form { align-items: center; border: 2px solid $BasicTextColor; display: flex; padding: .2em; }
+    input { border: none; flex-grow: 1; margin: 0; padding: .5em; }
+    button { background: rgba($BasicTextColor,0); color: $BasicTextColor; font-size: .5em; padding: .5em; 
+        &:hover { background: rgba($BasicTextColor,.1); }
+    }
+}

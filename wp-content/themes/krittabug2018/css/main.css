@@ -1046,15 +1046,25 @@
 
 /* line 3, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentsCount { font-size: 2em; left: 0; margin: 1em 0 1em 1em; position: absolute; top: 0; }
 
-/* line 6, src/scss/components/_comments.scss */ .comment-notes { font-size: .75em; }
+/* line 5, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentsList { margin: 0; }
 
-/* line 7, src/scss/components/_comments.scss */ .comment-form-comment { margin-bottom: 0.5em; }
+/* line 7, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentsList .comment { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 0 1em 0; }
 
-/* line 8, src/scss/components/_comments.scss */ .comment-form-author { float: left; margin-right: 5%; width: 30%; }
+/* line 9, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentsList .comment .children { -ms-flex-preferred-size: 100%; flex-basis: 100%; }
 
-/* line 9, src/scss/components/_comments.scss */ .comment-form-email { float: left; margin-right: 5%; width: 30%; }
+/* line 13, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentImage { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
 
-/* line 10, src/scss/components/_comments.scss */ .comment-form-url { float: left; width: 30%; }
+/* line 14, src/scss/components/_comments.scss */ .KB-Comments .KB-CommentMain { -webkit-box-flex: 5; -ms-flex: 5; flex: 5; }
+
+/* line 17, src/scss/components/_comments.scss */ .comment-notes { font-size: .75em; }
+
+/* line 18, src/scss/components/_comments.scss */ .comment-form-comment { margin-bottom: 0.5em; }
+
+/* line 19, src/scss/components/_comments.scss */ .comment-form-author { float: left; margin-right: 5%; width: 30%; }
+
+/* line 20, src/scss/components/_comments.scss */ .comment-form-email { float: left; margin-right: 5%; width: 30%; }
+
+/* line 21, src/scss/components/_comments.scss */ .comment-form-url { float: left; width: 30%; }
 
 /* line 1, src/scss/components/_commentscount.scss */ .KB-CommentsCount { font-family: "geomanist", Helvetica, Arial, sans-serif; font-size: .5em; margin-left: 1em; }
 
@@ -1066,19 +1076,49 @@
 
 /* line 5, src/scss/components/_entry.scss */ .KB-EntryTitle { color: #18686c; font-size: 1.75em; margin: 0; }
 
-/* line 2, src/scss/components/_footer.scss */ .KB-Footer { background: #0a3233; color: #fefefe; min-height: 50vh; padding: 1em; }
+/* line 2, src/scss/components/_footer.scss */ .KB-Footer { background: #18686c; color: #fefefe; min-height: 50vh; }
+
+/* line 4, src/scss/components/_footer.scss */ .KB-FooterRecents { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; background: #0a3233; color: #71c492; display: -webkit-box; display: -ms-flexbox; display: flex; padding: 2em 0 2em 2.5em; }
+
+/* line 6, src/scss/components/_footer.scss */ .KB-FooterRecents a { color: #71c492; }
+
+/* line 8, src/scss/components/_footer.scss */ .KB-FooterArticle { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-right: 2.5em; }
+
+/* line 10, src/scss/components/_footer.scss */ .KB-FooterAbout { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 2.5em; }
+
+/* line 12, src/scss/components/_footer.scss */ .KB-FooterAbout a { color: #f1f0f2; }
+
+/* line 13, src/scss/components/_footer.scss */ .KB-FooterAboutImage { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-right: 2.5em; }
+
+/* line 14, src/scss/components/_footer.scss */ .KB-FooterAboutContent { -webkit-box-flex: 2; -ms-flex: 2; flex: 2; font-size: .7em; }
+
+/* line 15, src/scss/components/_footer.scss */ .KB-FooterAboutSocial { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; margin-left: 5em; }
+
+/* line 17, src/scss/components/_footer.scss */ .KB-FooterAboutSocial a { display: block; }
+
+/* line 21, src/scss/components/_footer.scss */ .KB-FooterBottom { -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: #943851; color: #ef4b3f; display: -webkit-box; display: -ms-flexbox; display: flex; font-family: "geomanist", Helvetica, Arial, sans-serif; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 1.5em 2.5em 1em; }
+
+/* line 22, src/scss/components/_footer.scss */ .KB-FooterCopyright { font-size: .8em; line-height: 1.2em; }
+
+/* line 23, src/scss/components/_footer.scss */ .KB-FooterNav { font-size: 1.4em; }
+
+/* line 25, src/scss/components/_footer.scss */ .KB-FooterNavLink { color: #ef4b3f; font-weight: bold; margin-left: 1.5em; }
 
 /* line 1, src/scss/components/_header.scss */ .KB-Header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-sizing: border-box; box-sizing: border-box; color: #180018; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; left: 0; padding: 2em 0 2em 2em; position: fixed; top: 0; width: 25vw; z-index: 1; }
 
-/* line 11, src/scss/components/_mainnav.scss */ .KB-MainNav { display: none; -ms-flex-preferred-size: 100%; flex-basis: 100%; font-family: "geomanist", Helvetica, Arial, sans-serif; z-index: 1; }
+/* line 15, src/scss/components/_mainnav.scss */ .KB-MainNav { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-preferred-size: 100%; flex-basis: 100%; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-family: "geomanist", Helvetica, Arial, sans-serif; height: 100vh; left: 0; padding-top: 6em; -webkit-perspective: 30em; perspective: 30em; -webkit-perspective-origin: left center; perspective-origin: left center; position: fixed; -webkit-transform: translate(-100%, 0); -ms-transform: translate(-100%, 0); transform: translate(-100%, 0); top: 0; width: 25vw; z-index: 1; }
 
-/* line 4, src/scss/components/_mainnav.scss */ .KB-MainNavLink { color: #f1f0f2; display: block; font-weight: bold; padding-top: .45em; }
+/* line 4, src/scss/components/_mainnav.scss */ .KB-MainNav:before { background: -webkit-gradient(linear, left top, right top, from(white), color-stop(70%, rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0))); background: -webkit-linear-gradient(left, white 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0) 100%); background: linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0) 100%); content: ''; height: 100%; left: 0; position: absolute; top: 0; width: 150%; }
 
-/* line 6, src/scss/components/_mainnav.scss */ .KB-MainNavLink:nth-child(1) { color: #008d55; }
+/* line 6, src/scss/components/_mainnav.scss */ .KB-MainNavLink { -webkit-box-align: center; -ms-flex-align: center; align-items: center; color: #f1f0f2; display: -webkit-box; display: -ms-flexbox; display: flex; font-weight: bold; padding: .75em 2em; -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); -webkit-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center; }
 
-/* line 7, src/scss/components/_mainnav.scss */ .KB-MainNavLink:nth-child(2) { color: #943851; }
+/* line 8, src/scss/components/_mainnav.scss */ .KB-MainNavLink:nth-child(1) { color: #008d55; }
 
-/* line 1, src/scss/components/_menutrigger.scss */ .KB-MenuTrigger { cursor: pointer; height: 1.2em; margin-right: 1.5em; position: relative; width: 1.4em; }
+/* line 9, src/scss/components/_mainnav.scss */ .KB-MainNavLink:nth-child(2) { color: #943851; }
+
+/* line 12, src/scss/components/_mainnav.scss */ .KB-MainNavSidebar { padding: .75em 2em; -webkit-transform: rotateY(-90deg); transform: rotateY(-90deg); -webkit-transform-origin: left center; -ms-transform-origin: left center; transform-origin: left center; }
+
+/* line 1, src/scss/components/_menutrigger.scss */ .KB-MenuTrigger { cursor: pointer; height: 1.2em; margin-right: 1.5em; position: relative; width: 1.4em; z-index: 100; }
 
 /* line 3, src/scss/components/_menutrigger.scss */ .KB-MenuTrigger svg { cursor: pointer; }
 
@@ -1104,7 +1144,15 @@
 
 /* line 3, src/scss/components/_postsnav.scss */ .KB-PostsNavLink { background: #d49929; border-radius: .25em; color: #180018; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; letter-spacing: .1em; margin: 0 .5em; max-width: 12em; padding: .5em 1em; text-align: center; text-transform: uppercase; }
 
-/* line 2, src/scss/components/_siteid.scss */ .KB-SiteId { color: #f1f0f2; font-family: "Hugtophia", sans-serif; margin-top: .2em; position: relative; z-index: 1; }
+/* line 2, src/scss/components/_search.scss */ .KB-Search form { -webkit-box-align: center; -ms-flex-align: center; align-items: center; border: 2px solid #180018; display: -webkit-box; display: -ms-flexbox; display: flex; padding: .2em; }
+
+/* line 3, src/scss/components/_search.scss */ .KB-Search input { border: none; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; margin: 0; padding: .5em; }
+
+/* line 4, src/scss/components/_search.scss */ .KB-Search button { background: rgba(24, 0, 24, 0); color: #180018; font-size: .5em; padding: .5em; }
+
+/* line 5, src/scss/components/_search.scss */ .KB-Search button:hover { background: rgba(24, 0, 24, 0.1); }
+
+/* line 2, src/scss/components/_siteid.scss */ .KB-SiteId { color: #f1f0f2; font-family: "Hugtophia", sans-serif; margin-top: .2em; position: relative; z-index: 100; }
 
 /* line 4, src/scss/components/_siteid.scss */ .KB-SiteId svg { display: block; max-width: 10em; width: 100%; }
 
@@ -1152,6 +1200,8 @@
 
 /* line 7, src/scss/pages/_home.scss */ .home:not(.paged) .KB-SiteId { margin-top: 0; }
 
-/* line 8, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MainNav { display: block; -ms-flex-preferred-size: auto; flex-basis: auto; }
+/* line 8, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MainNav { display: block; -ms-flex-preferred-size: auto; flex-basis: auto; height: auto; padding: 0; position: static; text-align: right; -webkit-transform: none !important; -ms-transform: none !important; transform: none !important; }
 
-/* line 10, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MainNavLink { display: inline-block; font-size: 1.4em; margin-left: 1em; }
+/* line 9, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MainNav:before { display: none; }
+
+/* line 11, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MainNavLink { display: inline-block; font-size: 1.4em; margin-left: 1em; padding: 0; -webkit-transform: none !important; -ms-transform: none !important; transform: none !important; }

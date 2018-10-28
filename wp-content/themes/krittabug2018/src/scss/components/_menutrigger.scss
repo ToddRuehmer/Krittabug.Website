@@ -1,4 +1,4 @@
-.KB-MenuTrigger { cursor: pointer; height: 1.2em; margin-right: 1.5em; position: relative; width: 1.4em;
+.KB-MenuTrigger { cursor: pointer; height: 1.2em; margin-right: 1.5em; position: relative; width: 1.4em; z-index: 100;
 
     svg { cursor: pointer; }
     svg:nth-child(1) { left: 0; position: absolute; top: 0; width: 100%; 
