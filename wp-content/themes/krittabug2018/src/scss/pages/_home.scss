@@ -2,12 +2,12 @@
 .home:not(.paged) {
 
     .KB-Main { font-size: 1em; margin: 0 0 0 calc(40vw); padding: 0 0 0 2em; }
-    .KB-Header { background: $GreenBlack; flex-wrap: nowrap; justify-content: space-between; padding: 2em 2em .6em; position: relative; width: 100%; }
-    .KB-MenuTrigger { display: none; }
-    .KB-SiteId { margin-top: 0; }
-    .KB-MainNav { display: block; flex-basis: auto; height: auto; padding: 0; position: static; text-align: right; transform: none !important;
+    .KB-Header { width: 30vw; }
+    .KB-MenuTrigger { margin-right: .75em; }
+    .KB-SiteId { width: 6em; }
+    /*.KB-MainNav { display: block; flex-basis: auto; height: auto; padding: 0; position: static; text-align: right; transform: none !important;
         &:before { display: none; }
 
         &Link { display: inline-block; font-size: 1.4em; margin-left: 1em; padding: 0; transform: none !important; }
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 ﻿//Skeleton
 
-@mixin pageRow { margin: $Unit; }
+@mixin pageRow( $unit:$Unit ) { margin: $unit; }
 
 
 
@@ -8,6 +8,6 @@
 body { background: $White; color: $BasicTextColor; }
 
 //PageTop
-.KB-PageTop { @include pageRow; position: relative; }
+.KB-PageTop { @include pageRow(1em); position: relative; }
 //Main
 .KB-Main { font-size: .8em; margin-left: 25vw; padding: 3em 0; @include GlobalPadding; padding-left: 2.5em; }

@@ -380,28 +380,28 @@ html.appearance input[type="checkbox"] {
     font-size: $m*.8;
     line-height: 1.2em;
     opacity: 1;
-    text-transform: uppercase;
+    text-transform: none;
 }
 ::-moz-placeholder {
     color: $LightGrey;
     font-size: $m*.8;
     line-height: 1.2em;
     opacity: 1;
-    text-transform: uppercase;
+    text-transform: none;
 }
 :-ms-input-placeholder {
     color: $LightGrey;
     font-size: $m*.8;
     line-height: 1.2em;
     opacity: 1;
-    text-transform: uppercase;
+    text-transform: none;
 }
 :-moz-placeholder {
     color: $LightGrey;
     font-size: $m*.8;
     line-height: 1.2em;
     opacity: 1;
-    text-transform: uppercase;
+    text-transform: none;
 }
 textarea {
     @extend input[type="text"];

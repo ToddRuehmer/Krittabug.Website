@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php include 'top.php'; ?>
-
 <section class="KB-PageTop KB-PageTop_js">
 
 <?php
@@ -14,6 +12,8 @@
 
 <?php if(!is_paged()): ?>
 <section class="KB-ArticlesHeader KB-ArticlesHeader_js" role="banner" style="background-image: url('<?php echo getContentImage(); ?>');">
+
+	<?php include 'top.php'; ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article'); ?>>
 

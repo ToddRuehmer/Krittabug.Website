@@ -1,9 +1,9 @@
 ﻿//Footer
-.KB-Footer { background: $Blue; color: $white; min-height: 50vh;
+.KB-Footer { background: lighten($Midnight,1%); color: $white; min-height: 50vh;
  
-    &Recents { align-items: flex-end; background: $GreenBlack; color: $Mint; display: flex; padding: 2em 0 2em 2.5em; 
+    &Recents { align-items: flex-end; background: $Midnight; color: $LightBlue; display: flex; padding: 2em 0 2em 2.5em; 
     
-        a { color: $Mint; }
+        a { color: $LightBlue; }
     }
     &Article { flex: 1; margin-right: 2.5em; }
 
@@ -18,10 +18,10 @@
         }
     }
 
-    &Bottom { align-items: center; background: $Plum; color: $Candy; display: flex; font-family: $SansFontStack; justify-content: space-between; padding: 1.5em 2.5em 1em; }
+    &Bottom { align-items: center; color: $LightBlue; display: flex; font-family: $SansFontStack; justify-content: space-between; padding: 0 2.5em 1em; }
     &Copyright { font-size: .8em; line-height: 1.2em; }
     &Nav { font-size: 1.4em;
 
-        &Link { color: $Candy; font-weight: bold; margin-left: 1.5em; }
+        &Link { color: $LightBlue; font-weight: bold; margin-left: 1.5em; }
     }
 }

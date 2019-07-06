@@ -1,9 +1,9 @@
 //Entry Page
 .single {
 
-    .KB-Header { position: fixed; width: 25vw; }
+    .KB-Header { position: fixed; width: 25vw; @include pageRow(1em); }
     .KB-SiteId { width: 6em; }
     
     //Main
-    .KB-Main { font-size: .8em; margin-left: 25vw; padding: 3em 0; @include GlobalPadding; padding-left: 2.5em; }
+    .KB-Main { font-size: .8em; margin-left: 25vw; padding: 2em 0; @include GlobalPadding; padding-left: 2.5em; }
 }
