@@ -4,7 +4,6 @@ class Sticky {
 
         self.$wrapper = options.$wrapper;
         self.$sticky = options.$sticky;
-        console.log(options);
         self.scrollTop = 0;
         self.stickAt = 0;
         
@@ -17,11 +16,11 @@ class Sticky {
 
         this.scrollTop = $(window).scrollTop();
         if (this.scrollTop < this.staticAt) {
-            this.$sticky.addClass('KB-ArticlesHeader_static').removeClass('KB-ArticlesHeader_stuck');
+            this.$sticky.addClass('static').removeClass('stuck');
         } else if (this.scrollTop >= this.stickAt) {
-            this.$sticky.addClass('KB-ArticlesHeader_stuck').removeClass('KB-ArticlesHeader_static');
+            this.$sticky.addClass('stuck').removeClass('static');
         } else {
-            this.$sticky.removeClass('KB-ArticlesHeader_stuck KB-ArticlesHeader_static');
+            this.$sticky.removeClass('stuck static');
         }
     };
     getSizes() {

@@ -35,18 +35,37 @@ var mainMenu = {
         var self = this;
         
         self.mainTimeline = new TimelineMax({ paused: true })
-        .fromTo(self.$menu, .4, {xPercent:-100}, {xPercent:100})
-        .staggerFromTo(self.$items, .4, {rotationY:-90}, {rotationY:0}, .1, '-=.2');
+
+        $.each(self.$items, function(i) {
+            var $this = $(this);
+            
+            self.mainTimeline.fromTo($this, .2, {
+                scale   : 0,
+                x       : "-50%",
+                y       : "-50%",
+                zIndex  : i*-1
+            }, {
+                scale   : 1,
+                x       : "0%",
+                y       : (i*75)+"%",
+            }, i * 0.1);  
+        });
+
+        //.staggerFromTo(self.$items, .2, {scale:0,y:-100}, {scale:1,y:0}, .1, '-=.05');
     },
     openMenu() {
         var self = this;
 
+        self.$trigger.addClass('open');
+        self.$trigger.removeClass('closed');
         self.mainTimeline.play();
         self.open = true;
     },
     closeMenu() {
         var self = this;
 
+        self.$trigger.addClass('closed');
+        self.$trigger.removeClass('open');
         self.mainTimeline.reverse();
         self.open = false;
     }

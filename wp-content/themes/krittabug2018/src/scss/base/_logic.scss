@@ -53,6 +53,6 @@
 }
 
 @mixin GlobalPadding() {
-	padding-left: 5em;
-	padding-right: 5em;
+	padding-left: $Spacing;
+	padding-right: $Spacing;
 }

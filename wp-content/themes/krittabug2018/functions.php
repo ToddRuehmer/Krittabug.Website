@@ -37,18 +37,29 @@ if (function_exists('add_theme_support'))
 \*------------------------------------*/
 
 function getContentImage() {
-    global $post, $posts;
+  global $post, $posts;
+  if(get_field('featured_image', get_the_ID())['sizes']['large']) {
+    return get_field('featured_image', get_the_ID())['sizes']['large'];
+  } else {
     $first_img = '';
     ob_start();
     ob_end_clean();
     $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
     $first_img = $matches[1][0];
-  
+
     if(empty($first_img)) {
       $first_img = "/path/to/default.png";
     }
     return $first_img;
   }
+}
+
+
+/*------------------------------------*\
+	Media Sizes
+\*------------------------------------*/
+
+add_image_size('banner', 1200, 1200, true); // Banner
 
 
 /*------------------------------------*\

@@ -1,0 +1,6 @@
+﻿//Archive Header
+.KB-ArchiveHeader { align-items: center; background-position: center; background-size: cover; border-radius: .25em; box-sizing: border-box; color: $White; display: flex; flex-direction: column; height: calc(100vh - #{$Unit}); justify-content: space-between; left: 0; overflow: hidden; position: fixed; top: 0; width: 42vw; z-index: 1; @include pageRow(1em); 
+
+    &.stuck { bottom: 0; margin: 0; position: absolute !important; top: auto !important; }
+    &.static { margin: 0; position: absolute !important; }
+}

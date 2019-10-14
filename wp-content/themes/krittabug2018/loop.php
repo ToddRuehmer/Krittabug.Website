@@ -1,9 +1,16 @@
 <section class="KB-Articles KB-Articles_js">
 
 <?php
-	$loop = new WP_Query(array(
-		'offset' => 1
-	));
+	$queryArgs = Array();
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+
+	if($paged == 1) {
+		$queryArgs['offset'] = 1;
+	}
+	if($paged > 1) {
+		$queryArgs['paged'] = $paged;
+	}
+	$loop = new WP_Query($queryArgs);
 
 	if ($loop->have_posts()): while ($loop->have_posts()) : $loop->the_post(); 
 ?>
@@ -78,4 +85,12 @@
         });
 	});
 	</script>';
-endif; ?>
+	else:
+		$script =  '<script>
+		var headerSticky = new Sticky({
+			$wrapper: $(\'.KB-PageTop_js\'), 
+			$sticky: $(\'.KB-ArchiveHeader_js\')
+		});
+		</script>';
+	endif; 
+?>

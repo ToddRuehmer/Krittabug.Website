@@ -1,4 +1,9 @@
-.KB-PostsNav { display: flex; font-family: $SansFontStack; font-size: .5em; font-weight: bold; justify-content: center; margin: 2em 0;
+.KB-PostsNav { display: flex; font-family: $SansFontStack; font-size: .5em; font-weight: bold; justify-content: center; left: 100%; margin: 2em 0; position: relative; transform: translateX(-100vw);
 
-    &Link { background: $Gold; border-radius: .25em; color: $BasicTextColor; flex: 1; letter-spacing: .1em; margin: 0 .5em; max-width: 12em; padding: .5em 1em; text-align: center; text-transform: uppercase; }
+    &Link { background: darken($Gold,3%); border-radius: .25em; color: $BasicTextColor; flex: 1; letter-spacing: .1em; margin: 0 .5em; max-width: 12em; overflow: hidden; padding: .5em 1em; position: relative; text-align: center; text-transform: uppercase; z-index: 1;
+    
+        &:hover { color: inherit; }
+        &:after { background: $Gold; border-radius: 100%; content: ''; left: 50%; padding-bottom: 120%; position: absolute; top: 50%; transform: translate(-50%,-50%); transition: all .2s; width: 120%; z-index: -1; }
+        &:hover:after { padding-bottom: 0; width: 0; }
+    }
 }

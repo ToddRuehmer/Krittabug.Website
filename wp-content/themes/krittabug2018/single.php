@@ -1,3 +1,8 @@
+<?php
+	$featuredImage = get_field('featured_image')['sizes']['banner'];
+	$featuredImageCaption = get_field('featured_image_caption');
+?>
+
 <?php get_header(); ?>
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -7,7 +12,18 @@
 		<?php include 'top.php'; ?>
 	
 			<main role="main" class="KB-Main">
+
 			
+				<!-- banner -->
+				<?php if($featuredImage) { ?>
+					<section class="KB-FeaturedImage" style="background-image:url('<?php echo $featuredImage; ?>')">
+						<?php if($featuredImageCaption) { ?>
+							<div class="KB-FeaturedImageCaption"><?php echo $featuredImageCaption; ?></div>
+						<?php } ?>
+					</section>
+				<?php } ?>
+				<!-- /banner -->
+
 				<!-- article -->
 				<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Entry'); ?>>
 	

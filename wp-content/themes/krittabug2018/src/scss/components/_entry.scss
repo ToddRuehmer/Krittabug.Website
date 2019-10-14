@@ -1,6 +1,8 @@
-.KB-Entry {
+.KB-Entry { padding: $Unit 0; @include GlobalPadding; padding-top: 3em;
+
+    .KB-FeaturedImage + & { padding-top: 0; }
 
     &Top { position: relative; }
-    &Header { margin: 3em 0 0; }
+    &Header { margin: 6em 0 0; }
     &Title { font-size: 1.75em; margin: 0; }
 }

@@ -2,9 +2,9 @@
 
     .KB-CommentsCount { font-size: 2em; left: 0; margin: $Unit*.5 0 $Unit*.5 $Unit*.5; position: absolute; top: 0; }
 
-    .KB-CommentsList { margin: 0; 
+    .KB-CommentsList { margin: 0 0 2em; 
     
-        .comment { display: flex; flex-wrap: wrap; margin: 0 0 $m 0; 
+        .comment { display: flex; flex-wrap: wrap; font-size: .8em; line-height: 1.2em; margin: 0 0 $m 0; 
         
             .children { flex-basis: 100%; }
         }
@@ -16,6 +16,9 @@
 
 .comment-notes { font-size: .75em; }
 .comment-form-comment { margin-bottom: $Unit*.25; }
+.comment-meta { font-weight: bold; margin-bottom: .5em; }
+.logged-in-as { margin-top: -2em; font-size: .7em; }
 .comment-form-author { float: left; margin-right: 5%; width: 30%; }
 .comment-form-email { float: left; margin-right: 5%; width: 30%; }
 .comment-form-url { float: left; width: 30%; }
+.comment-reply-link { background: $Yellow; color: $BasicTextColor; display: block; font-size: .7em; margin-top: -.5em; padding: .2em .5em; width: fit-content; }

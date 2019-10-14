@@ -1,10 +1,10 @@
 ﻿//Articles Header
 .KB-ArticlesHeader { align-items: center; background-position: center; background-size: cover; border-radius: .25em; box-sizing: border-box; color: $White; display: flex; flex-direction: column; height: calc(100vh - #{$Unit}); justify-content: space-between; left: 0; overflow: hidden; position: fixed; top: 0; width: 42vw; z-index: 1; @include pageRow(1em); 
 
-    &_stuck { bottom: 0; margin: 0; position: absolute !important; top: auto !important; }
-    &_static { margin: 0; position: absolute !important; }
+    &.stuck { bottom: 0; margin: 0; position: absolute !important; top: auto !important; }
+    &.static { margin: 0; position: absolute !important; }
 
-    &:after { background: linear-gradient(to bottom, rgba($Midnight,.7) 0%, rgba($Midnight,1) 100%); bottom: 0; content: ""; height: calc(100% + 1em); left: -50%; min-height: 10em; position: absolute; right: -50%; z-index: -1; }
+    &:after { background: linear-gradient(to bottom, rgba($PurpleBlack,.7) 0%, rgba($PurpleBlack,1) 100%); bottom: 0; content: ""; height: calc(100% + 1em); left: -50%; min-height: 10em; position: absolute; right: -50%; z-index: -1; }
 
     .KB-Article { background: none; bottom: 0; margin: 0; position: absolute; width: 100%; 
     

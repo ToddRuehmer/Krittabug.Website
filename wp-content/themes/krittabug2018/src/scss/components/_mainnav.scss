@@ -1,15 +1,16 @@
 ﻿//Main Nav
-@mixin MainNav() { display: flex; flex-basis: 100%; flex-direction: column; font-family: $SansFontStack; height: 100vh; left: 0; padding-top: 6em; perspective: 30em; perspective-origin: left center; position: fixed; transform: translate(-100%,0); top: 0; width: 75vw; z-index: 1;
+@mixin MainNav() { display: flex; filter: url(#shadowed-goo); flex-direction: column; font-family: $SansFontStack; left: 0; position: relative; top: 0; z-index: 1;
 
-    &:before { background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8) 70%, rgba(255,255,255,0) 100%); content: ''; height: 100%; left: 0; position: absolute; top: 0; width: 150%; }
+    &Links { left: 1em; position: absolute; top: 1em; width: 6em; }
 
-    &Link { align-items: center; color: $White; display: flex; font-size: 4vw; font-weight: bold; padding: .75em 1em; transform: rotateY(-90deg); transform-origin: left center;
-    
-        &:nth-child(1) { color: $Kelly; }
-        &:nth-child(2) { color: $Plum; }
+    &Link { background: $LightBlue; border-radius: 100%; color: $White; display: block; font-size: 1.4em; font-weight: bold; left: 0; padding-bottom: 100%; position: absolute; text-align: center; transform: scale(0); top: 0; width: 100%;
+
+        &Text { left: 50%; position: absolute; top: 50%; transform: translate(-50%,-50%); }
     }
 
-    &Sidebar { padding: .75em 2em; transform: rotateY(-90deg); transform-origin: left center; }
+    &Sidebar { display: none; padding: .75em 2em; transform: rotateY(-90deg); transform-origin: left center; }
+
+    .filterSvg { bottom: 0; left: 0; position: absolute; right: 0; top: 0; z-index: -1; }
 }
 
 .KB-MainNav { @include MainNav; }

@@ -7,14 +7,14 @@
 		'posts_per_page' => 1
 	));
 
-	if ($loop->have_posts()): while ($loop->have_posts()) : $loop->the_post(); 
+	if ($loop->have_posts()): while ($loop->have_posts()) : $loop->the_post();
 ?>
 
 <?php if(!is_paged()): ?>
-<section class="KB-ArticlesHeader KB-ArticlesHeader_js" role="banner" style="background-image: url('<?php echo getContentImage(); ?>');">
-
+<section class="KB-ArticlesHeader KB-ArticlesHeader_js" role="banner" style="background-image: url('<?php echo getContentImage() ?>');">
+		
 	<?php include 'top.php'; ?>
-
+		
 	<article id="post-<?php the_ID(); ?>" <?php post_class('KB-Article'); ?>>
 
 		<header class="KB-ArticleHeader">
@@ -45,8 +45,12 @@
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="KB-ArticleLink"></a>
 
 	</article>
-
+	
 </section>
+<?php else: ?>
+	<section class="KB-ArchiveHeader KB-ArchiveHeader_js" role="banner">
+		<?php include 'top.php'; ?>
+	</section>
 <?php endif; ?>
 
 <?php endwhile; endif; ?>

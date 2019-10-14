@@ -1,17 +1,5 @@
 <header class="KB-Header KB-Header_js">
 
-	<div class="KB-MenuTrigger KB-MenuTrigger_js">
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
-			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
-		</svg>
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
-			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
-		</svg>
-		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
-			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
-		</svg>
-	</div>
-
 	<a href="<?php echo home_url(); ?>" class="KB-SiteId">
 		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 303.3 67" enable-background="new 0 0 303.3 67" xml:space="preserve">
 			<path fill="#00abd3" d="M62.2,26.6c-0.5-0.1-1.1-0.1-1.9-0.1c-5.8,0-7.8,4.2-7.8,9.9v16.7h-12V15.3h11.7v5c1.8-3.7,5.3-6,10-6V26.6z"/>
@@ -27,12 +15,47 @@
 	</a>
 	
 	<nav class="KB-MainNav KB-MainNav_js" role="navigation">
+
+	<div class="KB-MenuTrigger KB-MenuTrigger_js">
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
+			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
+		</svg>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
+			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
+		</svg>
+		<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 124 18" enable-background="new 0 0 124 18" xml:space="preserve">
+			<path fill="#00abd3" d="M115.2,18H8.8C3.9,18,0,14.1,0,9.2l0-0.4C0,3.9,3.9,0,8.8,0l106.4,0c4.8,0,8.8,3.9,8.8,8.8v0.4 C124,14.1,120.1,18,115.2,18z"/>
+		</svg>
+	</div>
+
+		<div class="KB-MainNavLinks">
 		<?php foreach (wp_get_nav_menu_items('main-navigation') as $key => $menuItem): ?>
-			<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLink KB-MainNavLink_js"><?php echo $menuItem->title ?></a>
+			<a href="<?php echo $menuItem->url ?>" class="KB-MainNavLink KB-MainNavLink_js">
+				<span class="KB-MainNavLinkText"><?php echo $menuItem->title ?></span>
+			</a>
 		<?php endforeach ?>
+		</div>
 		<section class="KB-MainNavSidebar KB-MainNavSidebar_js">
 			<?php get_sidebar(); ?>
 		</section>
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="" class="filterSvg">
+			<defs>
+				<filter id="shadowed-goo">
+					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+					<feOffset in="shadow" dx="1" dy="1" result="shadow"></feOffset>
+					<feComposite in2="shadow" in="goo" result="goo"></feComposite>
+					<feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
+				</filter>
+				<filter id="goo">
+					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
+					<feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
+				</filter>
+			</defs>
+		</svg>
+
 	</nav>
 
 	<?php if(is_single() || is_page()): ?>
