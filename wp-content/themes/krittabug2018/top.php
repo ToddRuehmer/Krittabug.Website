@@ -42,7 +42,7 @@
 		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="" class="filterSvg">
 			<defs>
 				<filter id="shadowed-goo">
-					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+					<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="5"></feGaussianBlur>
 					<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"></feColorMatrix>
 					<feOffset in="shadow" dx="1" dy="1" result="shadow"></feOffset>
 					<feComposite in2="shadow" in="goo" result="goo"></feComposite>

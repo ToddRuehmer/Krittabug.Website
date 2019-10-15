@@ -1,4 +1,4 @@
-.KB-FeaturedImage { background-position: center; background-size: cover; margin: $Unit*-1 $Spacing*-.1 $Unit $Spacing; min-height: 30em; position: relative; 
+.KB-FeaturedImage { background-position: center; background-size: cover; margin: $Unit*-1 $Spacing*-.1 $Unit $Spacing*.5; min-height: 30em; position: relative; 
 
     &Caption { bottom: 0; color: $White; font-family: $SansFontStack; font-size: .7em; left: 0; line-height: 1.2em; padding: 1.5em 9vw 1.5em 1.5em; position: absolute; right: 0; z-index: 1;
     

@@ -5,6 +5,8 @@
 
     &Link { background: $LightBlue; border-radius: 100%; color: $White; display: block; font-size: 1.4em; font-weight: bold; left: 0; padding-bottom: 100%; position: absolute; text-align: center; transform: scale(0); top: 0; width: 100%;
 
+        &:hover { color: lighten($LightBlue, 10%); }
+
         &Text { left: 50%; position: absolute; top: 50%; transform: translate(-50%,-50%); }
     }
 

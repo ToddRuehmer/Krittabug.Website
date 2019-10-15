@@ -36,10 +36,12 @@ var mainMenu = {
         
         self.mainTimeline = new TimelineMax({ paused: true })
 
+        self.mainTimeline.addLabel('start');
         $.each(self.$items, function(i) {
             var $this = $(this);
             
-            self.mainTimeline.fromTo($this, .2, {
+            self.mainTimeline
+            .fromTo($this, .2, {
                 scale   : 0,
                 x       : "-50%",
                 y       : "-50%",
@@ -48,17 +50,28 @@ var mainMenu = {
                 scale   : 1,
                 x       : "0%",
                 y       : (i*75)+"%",
-            }, i * 0.1);  
+                ease    : CustomEase.create("custom", "M0,0 C0.548,0.432 0.71,0.752 0.804,1.056 0.853,1.215 0.854,0.886 1,1")
+            }, i * 0.05)
         });
-
-        //.staggerFromTo(self.$items, .2, {scale:0,y:-100}, {scale:1,y:0}, .1, '-=.05');
+        self.mainTimeline.addLabel('open');
+        $.each(self.$items, function(i) {
+            var $this = $(this);
+            
+            self.mainTimeline
+            .to($this, .2, {
+                scale   : 0,
+                x       : "-50%",
+                y       : "-50%"
+            })
+        });
+        self.mainTimeline.addLabel('close');
     },
     openMenu() {
         var self = this;
 
         self.$trigger.addClass('open');
         self.$trigger.removeClass('closed');
-        self.mainTimeline.play();
+        self.mainTimeline.tweenFromTo('start','open');
         self.open = true;
     },
     closeMenu() {
@@ -66,7 +79,7 @@ var mainMenu = {
 
         self.$trigger.addClass('closed');
         self.$trigger.removeClass('open');
-        self.mainTimeline.reverse();
+        self.mainTimeline.tweenFromTo('open','close');
         self.open = false;
     }
 }

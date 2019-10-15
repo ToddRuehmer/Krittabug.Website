@@ -32,7 +32,8 @@ var $           = require( 'gulp-load-plugins' )(),
     bowerFiles  = require( 'gulp-main-bower-files' ),
     rename      = require( 'gulp-rename' ),
     utils       = require( 'gulp-util' ),
-    filter      = require( 'gulp-filter' );
+    filter      = require( 'gulp-filter' ),
+    addsrc      = require( 'gulp-add-src' );
 
 
 /*******************************************************************************
@@ -102,6 +103,7 @@ gulp.task( 'watch', function() {
 
   gulp.watch( 'src/js/**/*.js', function( event ) {
     gulp.start( 'concat-scripts' );
+    //gulp.start( 'concat-plugins' );
   });
 
   gulp.watch( 'src/scss/**/*.scss', [ 'styles' ]);
@@ -119,12 +121,14 @@ gulp.task( 'concat-plugins', function() {
   gulp.src( 'bower.json' )
     .pipe( bowerFiles() )
     .pipe( filter( '**/*.js' ))
+    .pipe( addsrc( 'src/js/CustomEase.min.js' ))
     .pipe( concat( 'plugins.js' ))
     .pipe( gulp.dest( 'js/' ))
     .pipe( rename( 'plugins.min.js' ))
     .pipe( uglify() )
     .on('error', function (err) { utils.log(utils.colors.red('[Error]'), err.toString()); })
-    .pipe( gulp.dest( 'js/' ));
+    .pipe( gulp.dest( 'js/' ))
+    .pipe( notify({ sound: false, message: 'plugins processed' }));
 });
 
 
