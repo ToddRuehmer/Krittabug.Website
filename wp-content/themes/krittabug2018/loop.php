@@ -54,16 +54,6 @@
 
 </section>
 
-<section class="KB-PostsNav">
-	<?php
-		add_filter('previous_posts_link_attributes', function(){ return 'class="KB-PostsNavLink"'; });
-		add_filter('next_posts_link_attributes', function(){ return 'class="KB-PostsNavLink"'; }); 
-		$nextLabel = is_paged() ? "Next" : "See More Posts"; 
-	?>
-	<?php previous_posts_link( "Back" , $max_pages ); ?>
-	<?php next_posts_link( $nextLabel , $max_pages ); ?>
-</section>
-
 <?php else: ?>
 
 	<!-- article -->
