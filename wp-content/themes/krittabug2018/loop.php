@@ -77,6 +77,7 @@
 	</script>';
 	else:
 		$script =  '<script>
+		var $test = function(){ console.log(\'test\');};
 		var headerSticky = new Sticky({
 			$wrapper: $(\'.KB-PageTop_js\'), 
 			$sticky: $(\'.KB-ArchiveHeader_js\')

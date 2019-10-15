@@ -1228,10 +1228,10 @@
 
 /* line 8, src/scss/pages/_entry.scss */ .single .KB-Main { font-size: .8em; margin-left: 25vw; padding: 0; }
 
-/* line 2, src/scss/pages/_home.scss */ .home:not(.paged) { /*.KB-MainNav { display: block; flex-basis: auto; height: auto; padding: 0; position: static; text-align: right; transform: none !important; &:before { display: none; } &Link { display: inline-block; font-size: 1.4em; margin-left: 1em; padding: 0; transform: none !important; } }*/ }
-
 /* line 4, src/scss/pages/_home.scss */ .home:not(.paged) .KB-Main { font-size: 1em; margin: 0 0 0 -webkit-calc(40vw); margin: 0 0 0 calc(40vw); padding: 0 0 0 2em; }
 
 /* line 5, src/scss/pages/_home.scss */ .home:not(.paged) .KB-Header { width: 30vw; }
 
 /* line 6, src/scss/pages/_home.scss */ .home:not(.paged) .KB-MenuTrigger { margin-right: .75em; }
+
+/* line 7, src/scss/pages/_home.scss */ .home:not(.paged) .KB-PostsNav { margin-left: -webkit-calc(40vw + 4em); margin-left: calc(40vw + 4em); }

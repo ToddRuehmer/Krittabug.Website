@@ -29,7 +29,7 @@ class Sticky {
         self.staticAt = self.$wrapper.offset().top - parseInt(self.$sticky.css('marginTop'));
         self.stickAt = self.$wrapper.outerHeight() - parseInt(self.$sticky.css('marginTop')) + self.$wrapper.offset().top - self.$sticky.outerHeight();
 
-        $(window).off('resize');
+        //$(window).off('resize');
         $(window).on('resize', function() {
             self.getSizes.bind(self)();
         });

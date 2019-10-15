@@ -4,9 +4,5 @@
     .KB-Main { font-size: 1em; margin: 0 0 0 calc(40vw); padding: 0 0 0 2em; }
     .KB-Header { width: 30vw; }
     .KB-MenuTrigger { margin-right: .75em; }
-    /*.KB-MainNav { display: block; flex-basis: auto; height: auto; padding: 0; position: static; text-align: right; transform: none !important;
-        &:before { display: none; }
-
-        &Link { display: inline-block; font-size: 1.4em; margin-left: 1em; padding: 0; transform: none !important; }
-    }*/
+    .KB-PostsNav { margin-left: calc(40vw + 4em); }
 }

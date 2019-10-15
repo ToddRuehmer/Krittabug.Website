@@ -60,7 +60,6 @@
 			<!-- /footer -->
 
 		<?php wp_footer(); ?>
-
 		<?php
 			global $script;
 			if(!empty($script)) {

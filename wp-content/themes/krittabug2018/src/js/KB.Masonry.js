@@ -46,6 +46,7 @@ class Masonry {
     }
 
     adjust() {
+        console.log('work');
         var self = this;
 
         self.highest = 0;
