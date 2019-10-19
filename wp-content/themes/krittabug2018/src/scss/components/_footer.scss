@@ -1,5 +1,5 @@
 ﻿//Footer
-.KB-Footer { background: lighten($PurpleBlack,1%); color: $white; min-height: 50vh;
+.KB-Footer { background: lighten($PurpleBlack,1%); clear: both; color: $white; min-height: 50vh;
  
     &Recents { align-items: flex-end; background: $PurpleBlack; color: $LightBlue; display: flex; padding: 2em 0 2em 2.5em; 
     

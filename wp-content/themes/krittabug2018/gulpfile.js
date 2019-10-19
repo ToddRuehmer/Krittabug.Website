@@ -122,6 +122,7 @@ gulp.task( 'concat-plugins', function() {
     .pipe( bowerFiles() )
     .pipe( filter( '**/*.js' ))
     .pipe( addsrc( 'src/js/CustomEase.min.js' ))
+    .pipe( addsrc( 'src/js/breathing-halftone.pkgd.js' ))
     .pipe( concat( 'plugins.js' ))
     .pipe( gulp.dest( 'js/' ))
     .pipe( rename( 'plugins.min.js' ))

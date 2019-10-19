@@ -7,7 +7,7 @@
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<section class="KB-EntryTop KB-EntryTop_js">
+	<section class="KB-EntryTop KB-Top_js">
 	
 		<?php include 'top.php'; ?>
 	
@@ -65,7 +65,7 @@
 	$script = '
 	<script>
 	var headerSticky = new Sticky({
-		$wrapper: $(\'.KB-EntryTop_js\'), 
+		$wrapper: $(\'.KB-Top_js\'), 
 		$sticky: $(\'.KB-Header_js\')
 	});
 	</script>
