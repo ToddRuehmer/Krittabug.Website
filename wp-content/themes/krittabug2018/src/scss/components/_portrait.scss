@@ -1,4 +1,9 @@
-.KB-Portrait { float: left; margin: $Unit*-1 $Unit $Unit $Unit*-1; width: 50vw;
+.KB-Portrait { width: 50vw;
     
-    &Image { width: 100%; }
+    &Image { display: none;
+    
+        .KB-Portrait & { display: block; width: 100%; }
+    }
+    
+    .KB-PortraitImage { width: 100%; }
 }

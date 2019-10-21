@@ -1,25 +1,22 @@
 //
 class Pixelate {
-    constructor(options = {$image}) {
+    constructor(options = {$image,$container}) {
         var self = this;
 
-        //self.$wrapper = options.$wrapper;
-        self.$image = options.$image[0];
+        self.$image = options.$image;
+        self.$container = options.$container;
         
-        self.pixelateImage.bind(self)();
+        //self.pixelateImage.bind(self)();
     }
 
     pixelateImage() {
-        this.pixelated = new BreathingHalftone(this.$image, {
-            bgColor: 'f1f0f2',
-            dotSize: 1/100,
-            fgColor: 'ccc',
-            hoverDiameter: 0.3,
-            initVelocity: 0.03,
-            isAdditive: false,
-            oscAmplitude: .2,
-            friction: 1,
-            channels: [ 'lum' ]
-        });
+        var $image = this.$image;
+        this.pixelated = $image[0].closePixelate([
+            //{ resolution: 64, size: 64 },
+            //{ shape: 'diamond', resolution: 64, size: 64, offset: 32 },
+            { shape: 'circle', resolution: 32, size: 32, offset: 16 },
+            { shape: 'circle', resolution: 32, size: 32 },
+          ]);
+          $(this.pixelated.canvas).appendTo(this.$container);
     };
 };

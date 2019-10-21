@@ -998,8 +998,6 @@
 
 /* line 13, src/scss/base/_skeleton.scss */ .KB-Main { font-size: .8em; margin-left: 25vw; padding: 3em 0; padding-left: 5em; padding-right: 5em; padding-left: 2.5em; }
 
-/* line 2, src/scss/components/_about.scss */ .KB-AboutHeader { margin: 6em 0 0; }
-
 /* line 2, src/scss/components/_archiveheader.scss */ .KB-ArchiveHeader { -webkit-box-align: center; -ms-flex-align: center; align-items: center; background-position: center; background-size: cover; border-radius: .25em; -webkit-box-sizing: border-box; box-sizing: border-box; color: #f1f0f2; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; height: -webkit-calc(100vh - 2em); height: calc(100vh - 2em); -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; left: 0; overflow: hidden; position: fixed; top: 0; width: 42vw; z-index: 1; margin: 1em; }
 
 /* line 4, src/scss/components/_archiveheader.scss */ .KB-ArchiveHeader.stuck { bottom: 0; margin: 0; position: absolute !important; top: auto !important; }
@@ -1170,9 +1168,13 @@
 
 /* line 20, src/scss/components/_menutrigger.scss */ .KB-MenuTrigger.open svg:nth-child(3) { top: 0; -webkit-transform: rotate(-45deg) translate(-50%, 0); -ms-transform: rotate(-45deg) translate(-50%, 0); transform: rotate(-45deg) translate(-50%, 0); }
 
-/* line 1, src/scss/components/_portrait.scss */ .KB-Portrait { float: left; margin: -2em 2em 2em -2em; width: 50vw; }
+/* line 1, src/scss/components/_portrait.scss */ .KB-Portrait { width: 50vw; }
 
-/* line 3, src/scss/components/_portrait.scss */ .KB-PortraitImage { width: 100%; }
+/* line 3, src/scss/components/_portrait.scss */ .KB-PortraitImage { display: none; }
+
+/* line 5, src/scss/components/_portrait.scss */ .KB-Portrait .KB-PortraitImage { display: block; width: 100%; }
+
+/* line 8, src/scss/components/_portrait.scss */ .KB-Portrait .KB-PortraitImage { width: 100%; }
 
 /* line 1, src/scss/components/_postsnav.scss */ .KB-PostsNav { border-top: 2px solid #ccc; display: -webkit-box; display: -ms-flexbox; display: flex; font-family: "geomanist", Helvetica, Arial, sans-serif; font-size: .5em; font-weight: bold; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 2em 0; padding-top: 1em; }
 
@@ -1198,11 +1200,17 @@
 
 /* line 4, src/scss/components/_siteid.scss */ .KB-SiteId svg { display: block; max-width: 10em; width: 100%; }
 
-/* line 3, src/scss/pages/_about.scss */ .page-template-template-about .KB-PageTop { margin: 0; }
+/* line 3, src/scss/pages/_about.scss */ .page-template-template-about .KB-Header { position: fixed; width: 25vw; margin: 1em; }
 
-/* line 4, src/scss/pages/_about.scss */ .page-template-template-about .KB-Header { position: fixed; margin: 1em; }
+/* line 8, src/scss/pages/_about.scss */ .KB-AboutHeader { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; margin-bottom: 2em; position: relative; }
 
-/* line 5, src/scss/pages/_about.scss */ .page-template-template-about .KB-Main { margin-left: 50vw; padding-left: 0; }
+/* line 9, src/scss/pages/_about.scss */ .KB-AboutHeader .KB-Portrait { border-radius: .25em; overflow: hidden; }
+
+/* line 11, src/scss/pages/_about.scss */ .KB-AboutTitle { color: #943851; font-size: 5em; left: 0; margin: 0; position: absolute; top: 50%; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); }
+
+/* line 13, src/scss/pages/_about.scss */ .KB-AboutIntro { color: #943851; font-size: 1.6em; font-weight: bold; line-height: 1.3em; margin-bottom: 1em; }
+
+/* line 14, src/scss/pages/_about.scss */ .KB-AboutContent1 { -webkit-column-count: 2; column-count: 2; margin-bottom: 1em; }
 
 /* line 4, src/scss/pages/_archive.scss */ .home.paged .KB-Main { padding: 0; }
 
