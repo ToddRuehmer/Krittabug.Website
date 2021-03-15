@@ -5,9 +5,12 @@
 <?php
 	if (have_posts()): while (have_posts()) : the_post(); 
 
-	$portrait = wp_get_attachment_image_src(get_field('featured_image'), 'large');
+	$portrait = wp_get_attachment_image_src(get_field('featured_image')['id'], 'large')[0];
 	$intro = get_field('intro');
 	$content1 = get_field('content_1');
+	$content2 = get_field('content_2');
+	$content2Image = wp_get_attachment_image_src(get_field('content_2_image')['id'], 'medium')[0];
+	$content3 = get_field('content_3');
 ?>
 
 
@@ -18,7 +21,7 @@
 	<main class="KB-Main" role="main">
 		<header class="KB-AboutHeader">
 			<section class="KB-Portrait KB-Portrait_js">		
-				<img src="<?php echo get_template_directory_uri(); ?>/images/img-portrait.jpg" class="KB-PortraitImage KB-PortraitImage_js" />
+				<img src="<?php echo $portrait; ?>" class="KB-PortraitImage KB-PortraitImage_js" />
 			</section>
 			<h1 class="KB-AboutTitle">
 				<?php the_field('about_heading'); ?>
@@ -34,6 +37,23 @@
 		<?php if($content1): ?>
 			<section class="KB-AboutContent1">
 				<?php echo $content1; ?>
+			</section>
+		<?php endif; ?>
+
+		<?php if($content2): ?>
+			<section class="KB-AboutContent2">
+				<?php if($content2Image): ?>
+					<section class="KB-AboutContent2Image">
+						<img src="<?php echo $content2Image; ?>" />
+					</section>
+				<?php endif; ?>
+				<?php echo $content2; ?>
+			</section>
+		<?php endif; ?>
+
+		<?php if($content3): ?>
+			<section class="KB-AboutContent3">
+				<?php echo $content3; ?>
 			</section>
 		<?php endif; ?>
 		
